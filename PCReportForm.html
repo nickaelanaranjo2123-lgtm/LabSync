@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PCReportForm</title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.box {
+			flex: 1;
+			align-self: stretch;
+		}
+		.box2 {
+			width: 18px;
+			box-sizing: border-box;
+			height: 18px;
+			box-sizing: border-box;
+			border-radius: 4px;
+			border: 1px solid #BABABA;
+		}
+		.box3 {
+			width: 134px;
+			height: 5px;
+			background: #09121C;
+			border-radius: 100px;
+		}
+		.button {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #44C0E3;
+			border-radius: 10px;
+			border: none;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			margin-bottom: 34px;
+			margin-left: 44px;
+			margin-right: 44px;
+			box-shadow: 0px 12px 21px #4461F226;
+			text-align: left;
+		}
+		.button-row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #44C0E3;
+			padding: 6px 19px;
+			margin-bottom: 27px;
+			margin-left: 13px;
+			margin-right: 13px;
+			text-align: left;
+		}
+		.button-row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #1FBC00;
+			border-radius: 10px;
+			border: 1px solid #C0C0C0;
+			padding: 4px 6px;
+			margin-right: 2px;
+			gap: 3px;
+			text-align: left;
+		}
+		.button-row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #DC0000;
+			border-radius: 10px;
+			border: 1px solid #C0C0C0;
+			padding: 4px 6px;
+			gap: 1px;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 10px;
+			padding-top: 14px;
+			margin-bottom: 18px;
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			border-radius: 32px;
+			width: 52px;
+			height: 21px;
+			object-fit: fill;
+		}
+		.image2 {
+			width: 66px;
+			height: 11px;
+			object-fit: fill;
+		}
+		.image3 {
+			width: 32px;
+			height: 32px;
+			margin-right: 23px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 31px;
+			height: 31px;
+			margin-right: 6px;
+			object-fit: fill;
+		}
+		.image5 {
+			width: 20px;
+			height: 20px;
+			margin-right: 6px;
+			object-fit: fill;
+		}
+		.image6 {
+			width: 16px;
+			height: 14px;
+			margin-right: 10px;
+			object-fit: fill;
+		}
+		.image7 {
+			width: 18px;
+			height: 16px;
+			margin-right: 10px;
+			object-fit: fill;
+		}
+		.image8 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.image9 {
+			width: 14px;
+			height: 14px;
+			margin-right: 1px;
+			object-fit: fill;
+		}
+		.image10 {
+			width: 16px;
+			height: 15px;
+			margin-right: 10px;
+			object-fit: fill;
+		}
+		.image11 {
+			width: 17px;
+			height: 17px;
+			margin-right: 11px;
+			object-fit: fill;
+		}
+		.image12 {
+			width: 18px;
+			height: 12px;
+			margin-right: 11px;
+			object-fit: fill;
+		}
+		.image13 {
+			width: 24px;
+			height: 24px;
+			margin-right: 8px;
+			object-fit: fill;
+		}
+		.input {
+			color: #BABABA;
+			font-size: 10px;
+			margin-bottom: 10px;
+			margin-left: 23px;
+			margin-right: 23px;
+			align-self: stretch;
+			background: none;
+			border-radius: 4px;
+			border: 1px solid #BABABA;
+			padding: 10px 13px;
+		}
+		.input2 {
+			color: #BABABA;
+			font-size: 10px;
+			margin-bottom: 22px;
+			margin-left: 23px;
+			margin-right: 23px;
+			align-self: stretch;
+			background: none;
+			border-radius: 4px;
+			border: 1px solid #BABABA;
+			padding: 9px 13px;
+		}
+		.input3 {
+			color: #BABABA;
+			font-size: 8px;
+			margin-bottom: 20px;
+			margin-left: 23px;
+			margin-right: 23px;
+			align-self: stretch;
+			background: none;
+			border-radius: 4px;
+			border: 1px solid #BABABA;
+			padding: 10px 9px;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 27px;
+			margin-left: 12px;
+			margin-right: 25px;
+		}
+		.row-view2 {
+			display: flex;
+			align-items: center;
+		}
+		.row-view3 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			border-radius: 4px;
+			border: 1px solid #BABABA;
+			padding: 9px 12px;
+			margin-bottom: 12px;
+			margin-left: 23px;
+			margin-right: 23px;
+		}
+		.row-view4 {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			background: #F7FDFF;
+			border-radius: 10px;
+			border: 1px solid #C0C0C0;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			border-radius: 4px;
+			border: 1px solid #BABABA;
+			padding: 9px 14px;
+			margin-bottom: 12px;
+			margin-left: 23px;
+			margin-right: 23px;
+		}
+		.row-view6 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #F7FDFF;
+			border-radius: 10px;
+			border: 1px solid #C0C0C0;
+		}
+		.row-view7 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			border-radius: 4px;
+			border: 1px solid #C0C0C0;
+			padding: 7px 12px;
+			margin-bottom: 10px;
+			margin-left: 23px;
+			margin-right: 23px;
+		}
+		.row-view8 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			border-radius: 4px;
+			border: 1px solid #BABABA;
+			padding: 8px 9px;
+			margin-bottom: 22px;
+			margin-left: 23px;
+			margin-right: 23px;
+		}
+		.row-view9 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #F7FDFF;
+			border-radius: 10px;
+			border: 1px solid #C0C0C0;
+			padding-left: 6px;
+			padding-right: 6px;
+			gap: 3px;
+		}
+		.row-view10 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 22px;
+			margin-left: 24px;
+			margin-right: 24px;
+			gap: 7px;
+		}
+		.scroll-view {
+			align-self: stretch;
+			background: #E7F9FF;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.text {
+			color: #000000;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #000000;
+			font-size: 12px;
+		}
+		.text3 {
+			color: #000000;
+			font-size: 8px;
+			font-weight: bold;
+			text-align: center;
+			margin-right: 31px;
+			flex: 1;
+		}
+		.text4 {
+			color: #000000;
+			font-size: 8px;
+			font-weight: bold;
+			text-align: center;
+			margin-right: 35px;
+			flex: 1;
+		}
+		.text5 {
+			color: #000000;
+			font-size: 8px;
+			font-weight: bold;
+			text-align: center;
+			flex: 1;
+		}
+		.text6 {
+			color: #000000;
+			font-size: 10px;
+			font-weight: bold;
+			margin-bottom: 13px;
+			margin-left: 24px;
+		}
+		.text7 {
+			color: #000000;
+			font-size: 10px;
+			text-align: center;
+			margin-right: 17px;
+			flex: 1;
+		}
+		.text8 {
+			color: #FFFFFF;
+			font-size: 8px;
+		}
+		.text9 {
+			color: #BABABA;
+			font-size: 8px;
+		}
+		.text10 {
+			color: #000000;
+			font-size: 10px;
+		}
+		.text11 {
+			color: #000000;
+			font-size: 10px;
+			font-weight: bold;
+			margin-bottom: 15px;
+			margin-left: 25px;
+		}
+		.text12 {
+			color: #000000;
+			font-size: 8px;
+		}
+		.text13 {
+			color: #FFFFFF;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.view {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 16px;
+		}
+		.view2 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 7px;
+		}
+		.view3 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="scroll-view">
+			<div class="row-view">
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/313a890e-d52b-47eb-812f-a0464431a8a4" 
+					class="image"
+				/>
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bca686c4-2527-49b2-8f66-0a9062ceef40" 
+					class="image2"
+				/>
+			</div>
+			<div class="view">
+				<div class="row-view2">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/83312fed-7712-4757-888d-8929bb31b662" 
+						class="image3"
+					/>
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4ab48b11-dee0-400b-8204-d6fc78712b06" 
+						class="image4"
+					/>
+					<span class="text" >
+						LabSync
+					</span>
+				</div>
+			</div>
+			<div class="view2">
+				<span class="text2" >
+					Computer Laboratory Monitoring Form
+				</span>
+			</div>
+			<div class="column">
+				<button class="button-row-view"
+					onclick="alert('Pressed!')"}>
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/28573c9b-f1be-4c3e-9599-a628232a03df" 
+						class="image5"
+					/>
+					<span class="text3" >
+						Room 203
+					</span>
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/41762a05-78bd-4abe-a9e0-2da04cb12c24" 
+						class="image6"
+					/>
+					<span class="text4" >
+						PC Unit 12
+					</span>
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/43b975f9-f555-4cb9-8853-bf6946c5e324" 
+						class="image5"
+					/>
+					<span class="text5" >
+						April 8, 2026
+					</span>
+				</button>
+				<input
+					type="text"
+					placeholder="Student Full Name (LN, FN, MI)"
+					class="input"
+				/>
+				<input
+					type="text"
+					placeholder="Program & Section (e.g., BSIT 3A)"
+					class="input2"
+				/>
+				<span class="text6" >
+					Equipment Status
+				</span>
+				<div class="row-view3">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d367c1aa-3bb1-471f-8e06-3dc9cad9699e" 
+						class="image7"
+					/>
+					<span class="text7" >
+						All-in-One PC/ Laptop
+					</span>
+					<div class="row-view4">
+						<button class="button-row-view2"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8eb3291c-4f0d-4660-a97a-e02df286da16" 
+								class="image8"
+							/>
+							<span class="text8" >
+								Working
+							</span>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2d342e58-0c07-492c-bca9-73da83b1e956" 
+							class="image9"
+						/>
+						<span class="text9" >
+							Issue
+						</span>
+					</div>
+				</div>
+				<div class="row-view5">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/417d1175-8fec-4315-8ede-ddc9b9367f0b" 
+						class="image10"
+					/>
+					<span class="text10" >
+						Monitor
+					</span>
+					<div class="box">
+					</div>
+					<div class="row-view6">
+						<button class="button-row-view2"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ebcd89cb-de17-4c26-9d07-2a84c68ac2a4" 
+								class="image8"
+							/>
+							<span class="text8" >
+								Working
+							</span>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/205697db-7729-4491-9898-753bae91d301" 
+							class="image9"
+						/>
+						<span class="text9" >
+							Issue
+						</span>
+					</div>
+				</div>
+				<div class="row-view7">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ae66640a-0abb-4b08-a8d7-764002992a7e" 
+						class="image11"
+					/>
+					<span class="text10" >
+						System Unit
+					</span>
+					<div class="box">
+					</div>
+					<div class="row-view6">
+						<button class="button-row-view2"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b75fc01b-bfd1-40af-8928-4eb6d53cfc6a" 
+								class="image8"
+							/>
+							<span class="text8" >
+								Working
+							</span>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1d014e4a-1f8c-471e-8b35-d23057e775b9" 
+							class="image9"
+						/>
+						<span class="text9" >
+							Issue
+						</span>
+					</div>
+				</div>
+				<div class="row-view3">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1e24bde8-2950-43fc-9c3b-7a0d2eaac596" 
+						class="image12"
+					/>
+					<span class="text10" >
+						Keyboard
+					</span>
+					<div class="box">
+					</div>
+					<div class="row-view6">
+						<button class="button-row-view2"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e19a3f5b-ec52-44e1-8569-3cca9a701a18" 
+								class="image8"
+							/>
+							<span class="text8" >
+								Working
+							</span>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4b595c4d-c5e0-4ca3-becb-8a1c900eb83c" 
+							class="image9"
+						/>
+						<span class="text9" >
+							Issue
+						</span>
+					</div>
+				</div>
+				<div class="row-view8">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1fb99a87-93a5-4ac3-8788-9ff3f9a0ffaf" 
+						class="image13"
+					/>
+					<span class="text10" >
+						Mouse
+					</span>
+					<div class="box">
+					</div>
+					<div class="row-view9">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6dbcb7ab-6391-4437-988b-57e7dbc80b42" 
+							class="image8"
+						/>
+						<span class="text9" >
+							Working
+						</span>
+						<button class="button-row-view3"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7bdae657-fef2-4039-8bc4-73bb3e480a36" 
+								class="image8"
+							/>
+							<span class="text8" >
+								Issue
+							</span>
+						</button>
+					</div>
+				</div>
+				<span class="text11" >
+					Remarks
+				</span>
+				<input
+					type="text"
+					placeholder="Additional Details (Briefly describe the issue)"
+					class="input3"
+				/>
+				<div class="row-view10">
+					<div class="box2">
+					</div>
+					<span class="text12" >
+						I confirm that i am using this PC and the report is accurate.
+					</span>
+				</div>
+				<button class="button"
+					onclick="alert('Pressed!')"}>
+					<span class="text13" >
+						Submit Report
+					</span>
+				</button>
+			</div>
+			<div class="view3">
+				<div class="box3">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

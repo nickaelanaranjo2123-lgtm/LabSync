@@ -1,0 +1,2565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DEPTHEADMASTERSCHEDULE2</title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.absolute-view {
+			position: absolute;
+			bottom: -27px;
+			right: 21px;
+			left: 21px;
+			align-self: stretch;
+			background: #FFFFFF;
+			border-radius: 10px;
+			border: 2px solid #FF8904;
+			padding-top: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.box {
+			flex: 1;
+			align-self: stretch;
+		}
+		.box2 {
+			width: 40px;
+			height: 2px;
+			background: #00000000;
+			margin-bottom: 32px;
+			margin-left: 6px;
+		}
+		.box3 {
+			height: 48px;
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.box4 {
+			height: 47px;
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.box5 {
+			max-width: 1013px;
+			height: 50px;
+			align-self: stretch;
+			margin-left: 301px;
+			margin-right: 1px;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 18px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 13px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 17px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 999px;
+			border: none;
+			padding: 6px 9px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 9px;
+			margin-right: 39px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px;
+			text-align: left;
+		}
+		.button7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 33554400px;
+			border: none;
+			padding: 14px;
+			margin-bottom: 38px;
+			text-align: left;
+		}
+		.button8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 33789616px;
+			border: none;
+			padding: 13px;
+			margin-bottom: 32px;
+			text-align: left;
+		}
+		.button9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 33789616px;
+			border: none;
+			padding: 13px;
+			margin-bottom: 38px;
+			text-align: left;
+		}
+		.button10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 33554400px;
+			border: 1px solid #E2E8F0;
+			padding: 9px 10px;
+			text-align: left;
+		}
+		.button-row-view {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 10px 24px;
+			gap: 8px;
+			text-align: left;
+			cursor: pointer;
+		}
+		.button-row-view2 {
+			display: flex;
+			align-items: center;
+			background: #1EBBD7;
+			border-radius: 10px;
+			border: none;
+			padding: 9px 69px;
+			gap: 8px;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border: 1px solid #FFFFFF;
+			padding-top: 17px;
+			gap: 16px;
+		}
+		.column2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-top: 22px;
+		}
+		.column4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 8px;
+			margin-bottom: 106px;
+		}
+		.column5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 14px;
+			gap: 32px;
+		}
+		.column6 {
+			flex: 1;
+		}
+		.column7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+		.column8 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 3px;
+		}
+		.column9 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 8px;
+		}
+		.column10 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 18px 21px;
+			gap: 3px;
+		}
+		.column11 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 4px;
+			gap: 4px;
+		}
+		.column13 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 11px;
+			gap: 4px;
+		}
+		.column14 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+		}
+		.column15 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 10px 21px 53px 21px;
+			gap: 16px;
+		}
+		.column16 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 10px;
+			border: 2px solid #FF8904;
+			padding: 10px;
+		}
+		.column17 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 55px;
+			gap: 2px;
+		}
+		.column18 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2px;
+		}
+		.column19 {
+			flex: 1;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #E2E8F0;
+			padding-top: 1px;
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+		.column20 {
+			align-self: stretch;
+			border-radius: 14px;
+		}
+		.column21 {
+			align-self: stretch;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			width: 40px;
+			height: 40px;
+			margin-right: 31px;
+			object-fit: fill;
+		}
+		.image2 {
+			width: 40px;
+			height: 40px;
+			margin-right: 17px;
+			object-fit: fill;
+		}
+		.image3 {
+			width: 38px;
+			height: 38px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.image5 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 51px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image7 {
+			border-radius: 33804044px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image8 {
+			border-radius: 33789616px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image9 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image10 {
+			border-radius: 33554400px;
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image11 {
+			border-radius: 33554400px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.image12 {
+			width: 16px;
+			height: 16px;
+			margin-right: 8px;
+			object-fit: fill;
+		}
+		.image13 {
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.image14 {
+			border-radius: 10px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.image15 {
+			width: 12px;
+			height: 12px;
+			margin-right: 8px;
+			object-fit: fill;
+		}
+		.image16 {
+			border-radius: 8px;
+			width: 12px;
+			height: 12px;
+			object-fit: fill;
+		}
+		.image17 {
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+			margin-right: 8px;
+			object-fit: fill;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-left: 28px;
+			margin-right: 28px;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 999px;
+			border: 1px solid #E2E8F0;
+			padding: 6px 7px;
+			gap: 10px;
+		}
+		.row-view4 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			margin-left: 20px;
+			margin-right: 20px;
+			gap: 10px;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 1px;
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+		.row-view6 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 5px;
+		}
+		.row-view7 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.row-view8 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 2px;
+			margin-left: 1px;
+			margin-right: 1px;
+			gap: 19px;
+		}
+		.row-view9 {
+			display: flex;
+			align-items: center;
+		}
+		.row-view10 {
+			display: flex;
+			align-items: flex-start;
+		}
+		.row-view11 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 25px;
+		}
+		.row-view12 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-top-left-radius: 14px;
+			border-top-right-radius: 14px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		.row-view13 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+		}
+		.row-view14 {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding: 16px 21px;
+			gap: 5px;
+		}
+		.row-view15 {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding: 15px 21px;
+			gap: 5px;
+		}
+		.text {
+			color: #000000;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #0F172A;
+			font-size: 13px;
+		}
+		.text3 {
+			color: #000000;
+			font-size: 13px;
+		}
+		.text4 {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text5 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text7 {
+			color: #1EBBD7;
+			font-size: 11px;
+		}
+		.text8 {
+			color: #1E3A8A;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #1EBBD7;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.text10 {
+			color: #94A3B8;
+			font-size: 12px;
+		}
+		.text11 {
+			color: #0F172A;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.text12 {
+			color: #94A3B8;
+			font-size: 13px;
+		}
+		.text13 {
+			color: #FFFFFF;
+			font-size: 13px;
+			font-weight: bold;
+		}
+		.text14 {
+			color: #0F172A;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.text15 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text16 {
+			color: #FF6900;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text17 {
+			color: #475569;
+			font-size: 9px;
+		}
+		.text18 {
+			color: #94A3B8;
+			font-size: 9px;
+			font-weight: bold;
+		}
+		.text19 {
+			color: #475569;
+			font-size: 9px;
+			margin-right: 40px;
+		}
+		.text20 {
+			color: #FFFFFF;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.text21 {
+			color: #94A3B8;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text22 {
+			color: #0F172A;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.view {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 26px;
+		}
+		.view3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 33804044px;
+			margin-bottom: 38px;
+			margin-left: 13px;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 2px;
+		}
+		.view6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-left: 27px;
+		}
+		.view7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 141px;
+		}
+		.view9 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 60px;
+		}
+		.view10 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 194px;
+		}
+		.view11 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F8FAFC;
+			border-radius: 10px;
+			border: 1px solid #E2E8F0;
+			padding: 11px 8px 11px 214px;
+		}
+		.view12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 175px;
+		}
+		.view13 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 39px;
+		}
+		.view14 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FEF2F2;
+			border-radius: 8px;
+			padding: 4px;
+		}
+		.view15 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-left: 20px;
+		}
+		.view16 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view17 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		.view18 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 55px;
+		}
+		.view19 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 44px;
+		}
+		.view20 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 51px;
+		}
+		.view21 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 61px;
+		}
+		.view22 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F8FAFC;
+			border: 1px solid #E2E8F0;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 52px;
+		}
+		.view23 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view24 {
+			flex: 1;
+			border: 1px solid #E2E8F0;
+			padding: 1px;
+		}
+		.view25 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.view26 {
+			flex: 1;
+			border: 1px solid #E2E8F0;
+			padding-top: 1px;
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+		html, body {
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+		}
+		.contain {
+			height: 100vh;
+			overflow: hidden;
+		}
+		.column {
+			flex: 1;
+			min-height: 0;
+			overflow: hidden;
+		}
+		.column > .row-view {
+			flex-shrink: 0;
+		}
+		.row-view4 {
+			flex: 1;
+			min-height: 0;
+			align-items: stretch;
+			overflow: hidden;
+		}
+		.column6 {
+			flex: 1;
+			min-width: 0;
+			min-height: 0;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+		}
+		.column6 > .row-view5,
+		.column6 > .row-view6,
+		.column6 > .box5 {
+			flex-shrink: 0;
+		}
+		.row-view8 {
+			flex: 1;
+			min-height: 0;
+			align-items: stretch;
+			overflow: hidden;
+		}
+		.column19 {
+			flex: 1;
+			min-width: 0;
+			min-height: 0;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+		}
+		.column20 {
+			flex-shrink: 0;
+			overflow-y: scroll;
+			scrollbar-width: thin;
+			scrollbar-color: transparent transparent;
+		}
+		.column20::-webkit-scrollbar {
+			width: 10px;
+			background: transparent;
+		}
+		.column20::-webkit-scrollbar-thumb,
+		.column20::-webkit-scrollbar-track {
+			background: transparent;
+		}
+		.column21 {
+			flex: 1;
+			min-height: 0;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			display: flex;
+			flex-direction: column;
+			scrollbar-width: thin;
+			scrollbar-color: #1EBBD7 #F1F5F9;
+		}
+		.column21::-webkit-scrollbar {
+			width: 10px;
+		}
+		.column21::-webkit-scrollbar-track {
+			background: #F1F5F9;
+		}
+		.column21::-webkit-scrollbar-thumb {
+			background: #1EBBD7;
+			border-radius: 8px;
+		}
+		.column20 .row-view13 > .view17,
+		.column20 .row-view13 > .view18,
+		.column20 .row-view13 > .view19,
+		.column20 .row-view13 > .view20,
+		.column20 .row-view13 > .view21,
+		.column20 .row-view13 > .view22 {
+			flex: 1;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 0;
+			margin: 0;
+		}
+		.column20 .row-view13 > .view17 {
+			flex: 0 0 200px;
+			justify-content: center;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.row-view8 > .column9 {
+			align-self: stretch;
+			min-height: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+		.column9 > .column10 {
+			flex-shrink: 0;
+		}
+		.column9 > .column14 {
+			flex: 1 1 0;
+			min-height: 0;
+			align-self: stretch;
+			overflow: hidden;
+		}
+		.column14 > .column15 {
+			flex: 1 1 0;
+			min-height: 0;
+			align-self: stretch;
+			overflow-y: auto;
+			overflow-x: hidden;
+			padding: 10px 21px 21px 21px;
+			scrollbar-width: thin;
+			scrollbar-color: #1EBBD7 #F1F5F9;
+		}
+		.column14 > .column15::-webkit-scrollbar {
+			width: 8px;
+		}
+		.column14 > .column15::-webkit-scrollbar-track {
+			background: #F1F5F9;
+			border-radius: 8px;
+		}
+		.column14 > .column15::-webkit-scrollbar-thumb {
+			background: #1EBBD7;
+			border-radius: 8px;
+		}
+		.column14 > .absolute-view {
+			display: none;
+		}
+		.column15 > .column16 {
+			align-self: stretch;
+			flex-shrink: 0;
+			cursor: grab;
+			user-select: none;
+			transition: transform 0.15s ease, box-shadow 0.15s ease;
+		}
+		.column15 > .column16:hover {
+			box-shadow: 0 4px 12px rgba(30, 187, 215, 0.25);
+			transform: translateY(-1px);
+		}
+		.column15 > .column16:active {
+			cursor: grabbing;
+		}
+		.column15 > .column16.dragging {
+			opacity: 0.4;
+		}
+		.column21 .row-view13 {
+			flex: 0 0 30px;
+			min-height: 30px;
+			height: 30px;
+		}
+		.column21 .row-view13 > .row-view14 {
+			flex: 0 0 200px;
+			box-sizing: border-box;
+			height: 30px;
+			padding: 0 26px;
+		}
+		.column21 .row-view13 > .view24,
+		.column21 .row-view13 > .view26 {
+			flex: 1;
+			box-sizing: border-box;
+			height: 30px;
+			padding: 0;
+		}
+		.column21 .row-view13 > .view24 > .box3,
+		.column21 .row-view13 > .view26 > .box4 {
+			height: 100%;
+			margin: 0;
+		}
+		.column21 .row-view13 > .view24,
+		.column21 .row-view13 > .view26 {
+			position: relative;
+		}
+		.column21 .row-view13 > .view24 > .box3.drop-hover,
+		.column21 .row-view13 > .view26 > .box4.drop-hover {
+			background: #E0F7FB;
+			outline: 2px dashed #1EBBD7;
+			outline-offset: -2px;
+		}
+		.schedule-block {
+			position: absolute;
+			top: 0;
+			left: 1px;
+			right: 1px;
+			height: 30px;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			color: #FFFFFF;
+			border-radius: 4px;
+			box-sizing: border-box;
+			padding: 3px 18px 3px 6px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 1px;
+			overflow: hidden;
+			z-index: 10;
+			box-shadow: 0 2px 6px rgba(14, 165, 201, 0.35);
+			cursor: grab;
+			user-select: none;
+		}
+		.schedule-block:active {
+			cursor: grabbing;
+		}
+		.schedule-block.dragging {
+			opacity: 0.4;
+		}
+		.schedule-block .sb-title {
+			font-size: 11px;
+			font-weight: bold;
+			line-height: 1.2;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.schedule-block .sb-prof,
+		.schedule-block .sb-section {
+			font-size: 10px;
+			line-height: 1.25;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.schedule-block .sb-prof {
+			opacity: 0.95;
+		}
+		.schedule-block .sb-section {
+			opacity: 0.85;
+			font-style: italic;
+		}
+		.schedule-block .sb-prof,
+		.schedule-block .sb-section {
+			display: none;
+		}
+		.schedule-block.span-2 .sb-prof,
+		.schedule-block.span-3 .sb-prof,
+		.schedule-block.span-4 .sb-prof,
+		.schedule-block.span-5 .sb-prof,
+		.schedule-block.span-6 .sb-prof,
+		.schedule-block.span-7 .sb-prof,
+		.schedule-block.span-8 .sb-prof {
+			display: block;
+		}
+		.schedule-block.span-3 .sb-section,
+		.schedule-block.span-4 .sb-section,
+		.schedule-block.span-5 .sb-section,
+		.schedule-block.span-6 .sb-section,
+		.schedule-block.span-7 .sb-section,
+		.schedule-block.span-8 .sb-section {
+			display: block;
+		}
+		.schedule-block .sb-resize {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 8px;
+			cursor: ns-resize;
+			background: rgba(255, 255, 255, 0.25);
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+		.schedule-block .sb-resize::after {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 2px;
+			margin: 3px auto 0;
+			background: #FFFFFF;
+			border-radius: 2px;
+			opacity: 0.85;
+		}
+		.schedule-block .sb-remove {
+			position: absolute;
+			top: 2px;
+			right: 4px;
+			width: 14px;
+			height: 14px;
+			line-height: 12px;
+			text-align: center;
+			font-size: 12px;
+			color: #FFFFFF;
+			cursor: pointer;
+			border-radius: 50%;
+			opacity: 0.85;
+		}
+		.schedule-block .sb-remove:hover {
+			background: rgba(0, 0, 0, 0.15);
+			opacity: 1;
+		}
+		/* === UNIFIED DEPT HEAD NAVIGATION HEADER (LabSync) ===
+		   Identical layout across every department head page so
+		   the top bar does not shift when navigating. */
+		body {
+			margin: 0 !important;
+		}
+		.contain > .column {
+			padding-top: 0 !important;
+		}
+		.row-view {
+			display: flex !important;
+			align-items: center !important;
+			background: #FFFFFF !important;
+			padding: 14px 28px !important;
+			margin: 0 !important;
+			box-sizing: border-box !important;
+			border-bottom: 1px solid #E2E8F0 !important;
+			flex-shrink: 0 !important;
+			gap: 0 !important;
+		}
+		.row-view > .image,
+		.row-view > .image2 {
+			width: 40px !important;
+			height: 40px !important;
+			flex-shrink: 0 !important;
+			object-fit: contain !important;
+			margin: 0 12px 0 0 !important;
+		}
+		.row-view > .text {
+			flex-shrink: 0 !important;
+			color: #0F172A !important;
+			font-size: 18px !important;
+			font-weight: 700 !important;
+			margin: 0 !important;
+			line-height: 40px !important;
+		}
+		.row-view > .box {
+			flex: 1 1 auto !important;
+			min-width: 16px !important;
+		}
+		.row-view > button {
+			flex-shrink: 0 !important;
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			background: transparent !important;
+			border: 1px solid transparent !important;
+			border-radius: 999px !important;
+			padding: 8px 16px !important;
+			margin: 0 4px !important;
+			height: 36px !important;
+			box-shadow: none !important;
+			cursor: pointer !important;
+			text-align: center !important;
+		}
+		.row-view > button > span {
+			color: #0F172A !important;
+			font-size: 13px !important;
+			font-weight: 500 !important;
+			white-space: nowrap !important;
+		}
+		.row-view > button.dh-active {
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9) !important;
+			border-color: transparent !important;
+			box-shadow: 0 4px 10px rgba(14, 165, 201, 0.25) !important;
+		}
+		.row-view > button.dh-active > span {
+			color: #FFFFFF !important;
+		}
+		.row-view > button:hover:not(.dh-active) {
+			background: #F1F5F9 !important;
+		}
+		.row-view > .row-view2 {
+			margin-left: 16px !important;
+			flex-shrink: 0 !important;
+			align-items: center !important;
+		}
+		/* === END UNIFIED HEADER === */
+		/* === TITLE / CLOCK ROW ALIGNMENT (match DASHBOARD) === */
+		.row-view4 {
+			margin-left: 0 !important;
+			margin-right: 28px !important;
+			margin-bottom: 0 !important;
+			gap: 10px !important;
+		}
+		.column6 > .row-view5 {
+			margin: 0 !important;
+		}
+		.row-view5 > .column2 {
+			gap: 2px !important;
+		}
+		.column2 > .view5 {
+			padding-top: 2px !important;
+			padding-bottom: 0 !important;
+		}
+		.column7 > .view6 {
+			margin-left: 0 !important;
+			padding-left: 27px !important;
+			padding-right: 1px !important;
+			padding-bottom: 0 !important;
+		}
+		/* === END TITLE / CLOCK ROW ALIGNMENT === */
+		/* === SIDEBAR ALIGNMENT (match DASHBOARD) === */
+		.row-view4 > .column3 {
+			background: #FFFFFF !important;
+			padding-bottom: 32px !important;
+			padding-left: 20px !important;
+			padding-right: 8px !important;
+			margin-top: 22px !important;
+		}
+		.column3 > .column4 {
+			padding-bottom: 8px !important;
+			margin-bottom: 106px !important;
+		}
+		.column3 > .column4 > .box2 {
+			margin-bottom: 45px !important;
+			margin-left: 6px !important;
+		}
+		.column3 > .column4 > .view4 {
+			margin-bottom: 51px !important;
+			margin-left: 13px !important;
+		}
+		.column3 > .column4 > .button8 {
+			background: transparent !important;
+			padding: 0 !important;
+			margin: 0 0 46px 13px !important;
+			box-shadow: none !important;
+		}
+		.column3 > .column4 > .button9 {
+			background: transparent !important;
+			padding: 0 !important;
+			margin: 0 0 52px 13px !important;
+			box-shadow: none !important;
+		}
+		.column3 > .column5 {
+			padding: 14px !important;
+			gap: 32px !important;
+		}
+		/* === END SIDEBAR ALIGNMENT === */
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="column">
+			<div class="row-view">
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/46d3432a-ddde-4604-8f61-20cf296b9b1a"
+					class="image"
+				/>
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5448879b-f156-490a-812c-03ba458a9097"
+					class="image2"
+				/>
+				<span class="text" >
+					LabSync
+				</span>
+				<div class="box">
+				</div>
+				<button class="button"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						Dashboard
+					</span>
+				</button>
+				<button class="button2"
+					onclick="alert('Pressed!')"}>
+					<span class="text3" >
+						Room Status
+					</span>
+				</button>
+				<button class="button3"
+					onclick="alert('Pressed!')"}>
+					<span class="text3" >
+						PC Reports
+					</span>
+				</button>
+				<button class="button2"
+					onclick="alert('Pressed!')"}>
+					<span class="text3" >
+						My Schedule
+					</span>
+				</button>
+				<button class="button4 dh-active"
+					onclick="alert('Pressed!')"}>
+					<span class="text4" >
+						Master Schedule
+					</span>
+				</button>
+				<button class="button5"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						Faculty Management
+					</span>
+				</button>
+				<div class="row-view2">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4c06548e-9f2e-4473-afe8-cc1d903b7b49"
+						class="image3"
+					/>
+					<div class="row-view3">
+						<button class="button6"
+							onclick="alert('Pressed!')"}>
+							<span class="text5" >
+								SG
+							</span>
+						</button>
+						<div class="column2">
+							<div class="view">
+								<span class="text6" >
+									Santi Guevarra
+								</span>
+							</div>
+							<div class="view2">
+								<span class="text7" >
+									IT Dept. Head
+								</span>
+							</div>
+						</div>
+						<div class="view3">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/86912f69-9f24-4264-8980-c3886e6b2aad"
+								class="image4"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-view4">
+				<div class="column3">
+					<div class="column4">
+						<button class="button7"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f577d0a6-3e07-4c40-8aed-160584ecc103"
+								class="image5"
+							/>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6486a3b8-5d74-4b90-a0d9-004840308406"
+							class="image6"
+						/>
+						<div class="view4">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a4c2dcbf-f703-416a-9582-3ce06520b26f"
+								class="image7"
+							/>
+						</div>
+						<button class="button8"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d2564352-af12-48ff-bdf2-b2f452978388"
+								class="image8"
+							/>
+						</button>
+						<div class="box2">
+						</div>
+						<button class="button9"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a8c706a1-712c-4f32-8c97-d49613c00b6c"
+								class="image8"
+							/>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/94fad46c-4a31-4d6b-830d-5a0945cc3ad6"
+							class="image9"
+						/>
+					</div>
+					<div class="column5">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a50c9965-476e-483a-9673-74544aafd393"
+							class="image5"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/560bba05-28af-481b-8f1c-dc0ed5f47a19"
+							class="image5"
+						/>
+					</div>
+				</div>
+				<div class="column6">
+					<div class="row-view5">
+						<div class="column2">
+							<div class="view5">
+								<span class="text8" >
+									Master Schedule Overview
+								</span>
+							</div>
+							<div class="view">
+								<span class="text2" >
+									Comprehensive view of all laboratory schedules and faculty assignments.
+								</span>
+							</div>
+						</div>
+						<div class="column7">
+							<div class="view">
+								<span class="text9" >
+									10:35:51 PM
+								</span>
+							</div>
+							<div class="view6">
+								<span class="text10" >
+									Thursday, April 16, 2026
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row-view6">
+						<div class="row-view7">
+							<button class="button10"
+								onclick="alert('Pressed!')"}>
+								<img
+									src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/41e6c534-fd4f-4bf9-9e4d-20ecbfa25d00"
+									class="image10"
+								/>
+							</button>
+							<div class="column8">
+								<div class="view7">
+									<span class="text11" >
+										Room 203 Schedule
+									</span>
+								</div>
+								<div class="view8">
+									<span class="text12" >
+										Building B
+									</span>
+								</div>
+							</div>
+						</div>
+						<button class="button-row-view"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/82d53770-c1d9-4d25-9db7-319ec443472f"
+								class="image11"
+							/>
+							<span class="text13" >
+								Save Schedule
+							</span>
+						</button>
+					</div>
+					<div class="row-view8">
+						<div class="column9">
+							<div class="column10">
+								<div class="row-view9">
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e25c1bfc-babb-4a3a-b210-b8d3b1a70af7"
+										class="image12"
+									/>
+									<div class="view9">
+										<span class="text14" >
+											Create Schedule Block
+										</span>
+									</div>
+								</div>
+								<div class="column11">
+									<div class="column12">
+										<div class="view10">
+											<span class="text15" >
+												Subject
+											</span>
+										</div>
+										<div class="view11">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/670a12ed-cba8-42e9-85d3-93b335110967"
+												class="image13"
+											/>
+										</div>
+									</div>
+									<div class="column12">
+										<div class="view12">
+											<span class="text15" >
+												Professor
+											</span>
+										</div>
+										<div class="view11">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/820e9d64-c016-41f2-bd56-a672ef2be0fb"
+												class="image13"
+											/>
+										</div>
+									</div>
+									<div class="column13">
+										<div class="view10">
+											<span class="text15" >
+												Section
+											</span>
+										</div>
+										<div class="view11">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/efd0c65d-79eb-47ed-af36-26bc745b5f2b"
+												class="image13"
+											/>
+										</div>
+									</div>
+									<button class="button-row-view2"
+										onclick="alert('Pressed!')"}>
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/73fb2e05-026d-4a1a-9ab5-0804b62768a1"
+											class="image14"
+										/>
+										<span class="text5" >
+											Create Block
+										</span>
+									</button>
+								</div>
+							</div>
+							<div class="column14">
+								<div class="column15">
+									<div class="column16" draggable="true" data-block-id="cs102-a">
+										<div class="row-view10">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2e93d7bf-2e74-4c76-a16e-dcd10cea1ddf"
+												class="image15"
+											/>
+											<div class="column17">
+												<div class="view">
+													<span class="text16" >
+														CS 102 - Programming II
+													</span>
+												</div>
+												<div class="view13">
+													<span class="text17" >
+														Prof. Roberto Cruz
+													</span>
+												</div>
+											</div>
+											<div class="view14">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a0c071dd-1f37-4862-8b44-cb229a26528d"
+													class="image16"
+												/>
+											</div>
+										</div>
+										<div class="view15">
+											<span class="text18" >
+												BSCS 2B
+											</span>
+										</div>
+									</div>
+									<div class="column16" draggable="true" data-block-id="cs102-b">
+										<div class="row-view10">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fa1b4c72-985d-4b3c-b894-41d44f4f99c0"
+												class="image15"
+											/>
+											<div class="column17">
+												<div class="view">
+													<span class="text16" >
+														CS 102 - Programming II
+													</span>
+												</div>
+												<div class="view13">
+													<span class="text17" >
+														Prof. Roberto Cruz
+													</span>
+												</div>
+											</div>
+											<div class="view14">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/30963b62-8e1d-4fce-89bd-e925044a8cc4"
+													class="image16"
+												/>
+											</div>
+										</div>
+										<div class="view15">
+											<span class="text18" >
+												BSCS 2B
+											</span>
+										</div>
+									</div>
+									<div class="column16" draggable="true" data-block-id="cs102-c">
+										<div class="row-view10">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e1d7a074-e71e-4500-9839-8bf7eb421dd2"
+												class="image15"
+											/>
+											<div class="column17">
+												<div class="view">
+													<span class="text16" >
+														CS 102 - Programming II
+													</span>
+												</div>
+												<div class="view13">
+													<span class="text17" >
+														Prof. Roberto Cruz
+													</span>
+												</div>
+											</div>
+											<div class="view14">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/86e53a33-9ce6-4be3-8a04-42f7c76e5cad"
+													class="image16"
+												/>
+											</div>
+										</div>
+										<div class="view15">
+											<span class="text18" >
+												BSCS 2B
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="absolute-view">
+									<div class="row-view11">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6be3694d-8e04-4453-a039-a4915c4a1543"
+											class="image15"
+										/>
+										<div class="column18">
+											<div class="view">
+												<span class="text16" >
+													CS 102 - Programming II
+												</span>
+											</div>
+											<span class="text19" >
+												Prof. Roberto Cruz
+											</span>
+										</div>
+										<div class="box">
+										</div>
+										<div class="view14">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/20e851e3-32be-49ea-b601-045425aee62a"
+												class="image16"
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="column19">
+							<div class="column20">
+								<div class="row-view12">
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/74896a58-80ae-4f45-978f-04bc20bdb149"
+										class="image17"
+									/>
+									<div class="view16">
+										<span class="text20" >
+											Weekly Schedule - Room 203
+										</span>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="view17">
+										<span class="text21" >
+											Time
+										</span>
+									</div>
+									<div class="view18">
+										<span class="text6" >
+											Monday
+										</span>
+									</div>
+									<div class="view18">
+										<span class="text6" >
+											Tuesday
+										</span>
+									</div>
+									<div class="view19">
+										<span class="text6" >
+											Wednesday
+										</span>
+									</div>
+									<div class="view20">
+										<span class="text6" >
+											Thursday
+										</span>
+									</div>
+									<div class="view21">
+										<span class="text6" >
+											Friday
+										</span>
+									</div>
+									<div class="view22">
+										<span class="text6" >
+											Saturday
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="column21">
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/25f455a3-4f97-44ff-88f4-f1dbf791144a"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												07:00 AM - 07:30 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5933647d-d5dd-4ecd-971d-03243bd9722d"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												07:30 AM - 08:00 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bc51d9c6-0f49-42df-a974-39845b62dd5a"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												08:00 AM - 08:30 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1513b7be-e6af-46ad-8b40-d0297c7d1186"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												08:30 AM - 09:00 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2c86e09a-db70-4c3f-bcb6-24a12382c994"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												09:00 AM - 09:30 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c373e2f3-393f-4d82-8ef4-074021414c09"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												09:30 AM - 10:00 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/024fcdf6-828f-4442-9268-d78a16016dec"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												10:00 AM - 10:30 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/544715ee-7e8d-42a3-ae47-251dc93f42e1"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												10:30 AM - 11:00 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ad909731-a06e-4bf9-9b71-5334521d51a5"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												11:00 AM - 11:30 AM
+											</span>
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+									<div class="view24">
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871"
+											class="image4"
+										/>
+										<div class="view23">
+											<span class="text22" >
+												11:30 AM - 12:00 PM
+											</span>
+										</div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >12:00 PM - 12:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >12:30 PM - 01:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >01:00 PM - 01:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >01:30 PM - 02:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >02:00 PM - 02:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >02:30 PM - 03:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >03:00 PM - 03:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >03:30 PM - 04:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >04:00 PM - 04:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >04:30 PM - 05:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >05:00 PM - 05:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >05:30 PM - 06:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >06:00 PM - 06:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >06:30 PM - 07:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >07:00 PM - 07:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >07:30 PM - 08:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >08:00 PM - 08:30 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+								<div class="row-view13">
+									<div class="row-view14">
+										<img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/822b7c15-d5c2-437a-9570-1c0956f47871" class="image4" />
+										<div class="view23"><span class="text22" >08:30 PM - 09:00 PM</span></div>
+									</div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+									<div class="view24"><div class="box3"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box5">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		(function () {
+			var ROW_HEIGHT = 30;
+			var MAX_SPAN = 8;
+			var draggedSidebarBlock = null;
+			var draggedScheduleBlock = null;
+			var dropSucceeded = false;
+
+			function getRowsContainer() {
+				return document.querySelector('.column21');
+			}
+
+			function getDayRows() {
+				return Array.prototype.slice.call(getRowsContainer().querySelectorAll(':scope > .row-view13'));
+			}
+
+			function getDayCells(row) {
+				return Array.prototype.slice.call(row.children).filter(function (c) {
+					return c.classList.contains('view24') || c.classList.contains('view26');
+				});
+			}
+
+			function isCellFree(cell, ignoreBlock) {
+				var occupiedBy = cell.getAttribute('data-occupied-by');
+				if (!occupiedBy) return true;
+				if (ignoreBlock && ignoreBlock.id === occupiedBy) return true;
+				return false;
+			}
+
+			function canSpan(startRowIdx, colIdx, span, ignoreBlock) {
+				var rows = getDayRows();
+				if (startRowIdx + span > rows.length) return false;
+				for (var i = 0; i < span; i++) {
+					var cell = getDayCells(rows[startRowIdx + i])[colIdx];
+					if (!cell || !isCellFree(cell, ignoreBlock)) return false;
+				}
+				return true;
+			}
+
+			function setOccupancy(blockEl, startRowIdx, colIdx, span) {
+				var rows = getDayRows();
+				document.querySelectorAll('[data-occupied-by="' + blockEl.id + '"]').forEach(function (c) {
+					c.removeAttribute('data-occupied-by');
+				});
+				for (var i = 0; i < span; i++) {
+					var cell = getDayCells(rows[startRowIdx + i])[colIdx];
+					if (cell) cell.setAttribute('data-occupied-by', blockEl.id);
+				}
+			}
+
+			function updateBlockSpan(blockEl, span) {
+				blockEl.dataset.rowSpan = span;
+				blockEl.style.height = (span * ROW_HEIGHT - 2) + 'px';
+				for (var i = 1; i <= MAX_SPAN; i++) blockEl.classList.remove('span-' + i);
+				blockEl.classList.add('span-' + span);
+			}
+
+			function removeBlock(blockEl) {
+				document.querySelectorAll('[data-occupied-by="' + blockEl.id + '"]').forEach(function (c) {
+					c.removeAttribute('data-occupied-by');
+				});
+				if (blockEl.parentNode) blockEl.parentNode.removeChild(blockEl);
+			}
+
+			var blockSeq = 0;
+			function createScheduleBlock(targetCell, source) {
+				var rows = getDayRows();
+				var row = targetCell.closest('.row-view13');
+				var startRowIdx = rows.indexOf(row);
+				var colIdx = getDayCells(row).indexOf(targetCell);
+				if (startRowIdx < 0 || colIdx < 0) return;
+				if (!canSpan(startRowIdx, colIdx, 1)) return;
+
+				var blockEl = document.createElement('div');
+				blockEl.className = 'schedule-block';
+				blockEl.id = 'sched-block-' + (++blockSeq);
+				blockEl.dataset.startRow = startRowIdx;
+				blockEl.dataset.colIdx = colIdx;
+
+				var subject = (source.querySelector('.text16') || {}).textContent || 'Block';
+				var prof = (source.querySelector('.text17') || {}).textContent || '';
+				var section = (source.querySelector('.text18') || {}).textContent || '';
+
+				blockEl.innerHTML =
+					'<span class="sb-remove" title="Remove">\u00d7</span>' +
+					'<div class="sb-title"></div>' +
+					'<div class="sb-prof"></div>' +
+					'<div class="sb-section"></div>' +
+					'<div class="sb-resize" title="Drag to resize"></div>';
+				blockEl.querySelector('.sb-title').textContent = subject.trim();
+				blockEl.querySelector('.sb-prof').textContent = prof.trim();
+				blockEl.querySelector('.sb-section').textContent = section.trim();
+				blockEl.dataset.sourceBlockId = source.getAttribute('data-block-id') || '';
+
+				targetCell.appendChild(blockEl);
+				updateBlockSpan(blockEl, 1);
+				setOccupancy(blockEl, startRowIdx, colIdx, 1);
+
+				blockEl.querySelector('.sb-remove').addEventListener('click', function (ev) {
+					ev.stopPropagation();
+					removeBlock(blockEl);
+				});
+				attachResize(blockEl);
+				attachScheduleBlockDrag(blockEl);
+				return blockEl;
+			}
+
+			function attachScheduleBlockDrag(blockEl) {
+				blockEl.setAttribute('draggable', 'true');
+				blockEl.addEventListener('dragstart', function (e) {
+					if (e.target.classList.contains('sb-resize') || e.target.classList.contains('sb-remove')) {
+						e.preventDefault();
+						return;
+					}
+					draggedScheduleBlock = blockEl;
+					dropSucceeded = false;
+					blockEl.classList.add('dragging');
+					e.dataTransfer.effectAllowed = 'move';
+					e.dataTransfer.setData('text/plain', blockEl.id);
+				});
+				blockEl.addEventListener('dragend', function () {
+					blockEl.classList.remove('dragging');
+					document.querySelectorAll('.box3.drop-hover, .box4.drop-hover').forEach(function (c) {
+						c.classList.remove('drop-hover');
+					});
+					draggedScheduleBlock = null;
+					dropSucceeded = false;
+				});
+			}
+
+			function moveScheduleBlock(blockEl, targetCell) {
+				var rows = getDayRows();
+				var newRow = targetCell.closest('.row-view13');
+				var newStartRow = rows.indexOf(newRow);
+				var newColIdx = getDayCells(newRow).indexOf(targetCell);
+				if (newStartRow < 0 || newColIdx < 0) return false;
+				var span = parseInt(blockEl.dataset.rowSpan, 10) || 1;
+				if (!canSpan(newStartRow, newColIdx, span, blockEl)) return false;
+				document.querySelectorAll('[data-occupied-by="' + blockEl.id + '"]').forEach(function (c) {
+					c.removeAttribute('data-occupied-by');
+				});
+				targetCell.appendChild(blockEl);
+				blockEl.dataset.startRow = newStartRow;
+				blockEl.dataset.colIdx = newColIdx;
+				setOccupancy(blockEl, newStartRow, newColIdx, span);
+				return true;
+			}
+
+			function attachResize(blockEl) {
+				var handle = blockEl.querySelector('.sb-resize');
+				handle.addEventListener('mousedown', function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+					var startY = e.clientY;
+					var startSpan = parseInt(blockEl.dataset.rowSpan, 10) || 1;
+					var startRowIdx = parseInt(blockEl.dataset.startRow, 10);
+					var colIdx = parseInt(blockEl.dataset.colIdx, 10);
+
+					function onMove(ev) {
+						var delta = ev.clientY - startY;
+						var newSpan = Math.max(1, Math.min(MAX_SPAN, startSpan + Math.round(delta / ROW_HEIGHT)));
+						while (newSpan > 1 && !canSpan(startRowIdx, colIdx, newSpan, blockEl)) newSpan--;
+						if (newSpan !== parseInt(blockEl.dataset.rowSpan, 10)) {
+							updateBlockSpan(blockEl, newSpan);
+							setOccupancy(blockEl, startRowIdx, colIdx, newSpan);
+						}
+					}
+					function onUp() {
+						document.removeEventListener('mousemove', onMove);
+						document.removeEventListener('mouseup', onUp);
+					}
+					document.addEventListener('mousemove', onMove);
+					document.addEventListener('mouseup', onUp);
+				});
+			}
+
+			function attachSidebarBlock(block) {
+				block.addEventListener('dragstart', function (e) {
+					draggedSidebarBlock = block;
+					dropSucceeded = false;
+					block.classList.add('dragging');
+					e.dataTransfer.effectAllowed = 'move';
+					e.dataTransfer.setData('text/plain', block.getAttribute('data-block-id') || '');
+				});
+				block.addEventListener('dragend', function () {
+					block.classList.remove('dragging');
+					document.querySelectorAll('.box3.drop-hover, .box4.drop-hover').forEach(function (c) {
+						c.classList.remove('drop-hover');
+					});
+					if (dropSucceeded && block.parentNode) block.parentNode.removeChild(block);
+					draggedSidebarBlock = null;
+					dropSucceeded = false;
+				});
+			}
+			document.querySelectorAll('.column15 > .column16').forEach(attachSidebarBlock);
+
+			function isValidTarget(cell) {
+				if (draggedSidebarBlock) {
+					return !cell.getAttribute('data-occupied-by');
+				}
+				if (draggedScheduleBlock) {
+					var rows = getDayRows();
+					var row = cell.closest('.row-view13');
+					var startRow = rows.indexOf(row);
+					var colIdx = getDayCells(row).indexOf(cell);
+					var span = parseInt(draggedScheduleBlock.dataset.rowSpan, 10) || 1;
+					return canSpan(startRow, colIdx, span, draggedScheduleBlock);
+				}
+				return false;
+			}
+
+			var dropTargets = document.querySelectorAll('.column21 .row-view13 > .view24, .column21 .row-view13 > .view26');
+			dropTargets.forEach(function (cell) {
+				cell.addEventListener('dragover', function (e) {
+					if (!draggedSidebarBlock && !draggedScheduleBlock) return;
+					if (!isValidTarget(cell)) return;
+					e.preventDefault();
+					e.dataTransfer.dropEffect = 'move';
+					var inner = cell.querySelector('.box3, .box4');
+					if (inner) inner.classList.add('drop-hover');
+				});
+				cell.addEventListener('dragleave', function () {
+					var inner = cell.querySelector('.box3, .box4');
+					if (inner) inner.classList.remove('drop-hover');
+				});
+				cell.addEventListener('drop', function (e) {
+					e.preventDefault();
+					var inner = cell.querySelector('.box3, .box4');
+					if (inner) inner.classList.remove('drop-hover');
+					if (draggedSidebarBlock) {
+						if (cell.getAttribute('data-occupied-by')) return;
+						var blockEl = createScheduleBlock(cell, draggedSidebarBlock);
+						if (blockEl) dropSucceeded = true;
+					} else if (draggedScheduleBlock) {
+						if (moveScheduleBlock(draggedScheduleBlock, cell)) dropSucceeded = true;
+					}
+				});
+			});
+		})();
+	</script>
+</body>
+</html>

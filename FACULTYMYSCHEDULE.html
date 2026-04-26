@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FACULTYMYSCHEDULE</title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.box {
+			flex: 1;
+			align-self: stretch;
+		}
+		.box2 {
+			height: 30px;
+			box-sizing: border-box;
+			flex: 1;
+			background: #FFFFFF;
+			border: 1px solid #E2E8F0;
+		}
+		.box3 {
+			height: 16px;
+			box-sizing: border-box;
+			flex: 1;
+			background: #FFFFFF;
+			border: 1px solid #E2E8F0;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 18px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 13px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 17px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 999px;
+			border: none;
+			padding: 6px 13px;
+			margin-right: 172px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px;
+			text-align: left;
+		}
+		.button6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 33789616px;
+			border: none;
+			padding: 13px 14px;
+			margin-bottom: 188px;
+			margin-left: 19px;
+			text-align: left;
+		}
+		.button-row-view {
+			display: flex;
+			align-items: center;
+			background: #1EBBD7;
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px 11px;
+			margin-right: 20px;
+			gap: 7px;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border: 1px solid #FFFFFF;
+			padding-top: 14px;
+			gap: 16px;
+		}
+		.column2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-top: 76px;
+			margin-top: 23px;
+		}
+		.column4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 14px;
+			margin-bottom: 35px;
+			margin-left: 20px;
+			margin-right: 8px;
+			gap: 32px;
+		}
+		.column5 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+		.column6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+		.column7 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #F8F8F8;
+			border-radius: 14px;
+			border: 1px solid #E2E8F0;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			gap: 15px;
+		}
+		.column8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			margin-left: 21px;
+			margin-right: 21px;
+			gap: 1px;
+		}
+		.column9 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column10 {
+			align-self: stretch;
+			background: #FFFFFF;
+			border-bottom-right-radius: 14px;
+			border-bottom-left-radius: 14px;
+			border: 1px solid #D6D6D6;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			width: 40px;
+			height: 40px;
+			margin-right: 31px;
+			object-fit: fill;
+		}
+		.image2 {
+			width: 40px;
+			height: 40px;
+			margin-right: 17px;
+			object-fit: fill;
+		}
+		.image3 {
+			width: 38px;
+			height: 38px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.image5 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 65px;
+			margin-left: 34px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 33804044px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image7 {
+			border-radius: 33789616px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image8 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image9 {
+			border-top-left-radius: 14px;
+			border-top-right-radius: 14px;
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+			margin-right: 8px;
+			object-fit: fill;
+		}
+		.image10 {
+			width: 14px;
+			height: 8px;
+			object-fit: fill;
+		}
+		.image11 {
+			border-radius: 33554400px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			margin-left: 28px;
+			margin-right: 28px;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 999px;
+			border: 1px solid #E2E8F0;
+			padding: 6px 7px;
+			gap: 10px;
+		}
+		.row-view4 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			margin-left: 8px;
+			margin-right: 28px;
+			gap: 2px;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.row-view6 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #1EBBD7;
+			border-top-left-radius: 14px;
+			border-top-right-radius: 14px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		.row-view7 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+		}
+		.row-view8 {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border: 1px solid #E2E8F0;
+			padding: 6px 26px;
+			gap: 5px;
+		}
+		.row-view9 {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border: 1px solid #E2E8F0;
+			padding-top: 6px;
+			padding-left: 26px;
+			padding-right: 26px;
+			gap: 5px;
+		}
+		.text {
+			color: #000000;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #0F172A;
+			font-size: 13px;
+		}
+		.text3 {
+			color: #000000;
+			font-size: 13px;
+		}
+		.text4 {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text5 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text7 {
+			color: #1EBBD7;
+			font-size: 11px;
+		}
+		.text8 {
+			color: #1E3A8A;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #1EBBD7;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.text10 {
+			color: #94A3B8;
+			font-size: 12px;
+		}
+		.text11 {
+			color: #FFFFFF;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.text12 {
+			color: #94A3B8;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text13 {
+			color: #000000;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text14 {
+			color: #0F172A;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text15 {
+			color: #FFFFFF;
+			font-size: 13px;
+			font-weight: bold;
+		}
+		.view {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 45px;
+		}
+		.view3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 33804044px;
+			margin-bottom: 51px;
+			margin-left: 33px;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 2px;
+			padding-right: 116px;
+		}
+		.view6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-left: 27px;
+		}
+		.view7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E5F2FF;
+			border: 1px solid #D6D6D6;
+			padding: 11px 72px;
+		}
+		.view9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E5F2FF;
+			border: 1px solid #D6D6D6;
+			padding: 11px 60px;
+			margin-left: 180px;
+		}
+		.view10 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E5F2FF;
+			border: 1px solid #D6D6D6;
+			padding: 11px 60px;
+			margin-left: 360px;
+		}
+		.view11 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.view12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E5F2FF;
+			border: 1px solid #D6D6D6;
+			padding: 11px 50px;
+		}
+		.view13 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E5F2FF;
+			border: 1px solid #D6D6D6;
+			padding: 11px 56px;
+			margin-left: 720px;
+		}
+		.view14 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		.view15 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E5F2FF;
+			border: 1px solid #D6D6D6;
+			padding: 11px 66px;
+			margin-right: 180px;
+		}
+		.view16 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E5F2FF;
+			border: 1px solid #D6D6D6;
+			padding: 11px 56px;
+		}
+		.view17 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view18 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="column">
+			<div class="row-view">
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d3d74c39-444d-426b-8986-44c1aa10973a" 
+					class="image"
+				/>
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bfc03957-ee6a-4276-a297-d1fb32eed6c5" 
+					class="image2"
+				/>
+				<span class="text" >
+					LabSync
+				</span>
+				<div class="box">
+				</div>
+				<button class="button"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						Dashboard
+					</span>
+				</button>
+				<button class="button2"
+					onclick="alert('Pressed!')"}>
+					<span class="text3" >
+						Room Status
+					</span>
+				</button>
+				<button class="button3"
+					onclick="alert('Pressed!')"}>
+					<span class="text3" >
+						PC Reports
+					</span>
+				</button>
+				<button class="button4"
+					onclick="alert('Pressed!')"}>
+					<span class="text4" >
+						My Schedule
+					</span>
+				</button>
+				<div class="row-view2">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/638f9557-fe9d-4a03-8972-0702efea3935" 
+						class="image3"
+					/>
+					<div class="row-view3">
+						<button class="button5"
+							onclick="alert('Pressed!')"}>
+							<span class="text5" >
+								SG
+							</span>
+						</button>
+						<div class="column2">
+							<div class="view">
+								<span class="text6" >
+									Santi Guevarra
+								</span>
+							</div>
+							<div class="view2">
+								<span class="text7" >
+									Professor
+								</span>
+							</div>
+						</div>
+						<div class="view3">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b704e022-87cf-4f5e-bcce-0c57afb59d41" 
+								class="image4"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-view4">
+				<div class="column3">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/adc6644a-0323-4878-98de-37b14a22bcc9" 
+						class="image5"
+					/>
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0ff8337d-6078-49ae-9234-fea9cd684990" 
+						class="image5"
+					/>
+					<div class="view4">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4638d831-0810-448b-80ff-0edad159fe73" 
+							class="image6"
+						/>
+					</div>
+					<button class="button6"
+						onclick="alert('Pressed!')"}>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f2746a0d-fd2d-4433-992d-9e34fc90d772" 
+							class="image7"
+						/>
+					</button>
+					<div class="column4">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/677f1099-c10e-4e38-9243-c885c782e9f1" 
+							class="image8"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f043579a-1b6f-452d-ac1d-04eef545a105" 
+							class="image8"
+						/>
+					</div>
+				</div>
+				<div class="column5">
+					<div class="row-view5">
+						<div class="column2">
+							<div class="view5">
+								<span class="text8" >
+									My Schedule
+								</span>
+							</div>
+							<div class="view">
+								<span class="text2" >
+									View your complete weekly teaching schedule and class assignments.
+								</span>
+							</div>
+						</div>
+						<div class="column6">
+							<div class="view">
+								<span class="text9" >
+									10:35:51 PM
+								</span>
+							</div>
+							<div class="view6">
+								<span class="text10" >
+									Thursday, April 16, 2026
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="column7">
+						<div class="column8">
+							<div class="row-view6">
+								<img
+									src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/eecb5345-621a-4424-9582-7a6f388a7c28" 
+									class="image9"
+								/>
+								<div class="view7">
+									<span class="text11" >
+										Ira Guevarra’s Schedule
+									</span>
+								</div>
+							</div>
+							<div class="column9">
+								<div class="view8">
+									<span class="text12" >
+										Time
+									</span>
+								</div>
+								<div class="view9">
+									<span class="text13" >
+										MONDAY
+									</span>
+								</div>
+								<div class="view10">
+									<span class="text13" >
+										TUESDAY
+									</span>
+								</div>
+								<div class="view11">
+									<div class="view12">
+										<span class="text13" >
+											WEDNESDAY
+										</span>
+									</div>
+								</div>
+								<div class="view13">
+									<span class="text13" >
+										THURSDAY
+									</span>
+								</div>
+								<div class="view14">
+									<div class="view15">
+										<span class="text13" >
+											FRIDAY
+										</span>
+									</div>
+								</div>
+								<div class="view14">
+									<div class="view16">
+										<span class="text13" >
+											SATURDAY
+										</span>
+									</div>
+								</div>
+								<div class="column10">
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/93b9300c-83df-4088-94cf-46216fe7d89e" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													07:00 AM - 07:30 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f0d14646-24f6-4420-a6f1-fb67dc8e0fd0" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													07:30 AM - 08:00 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/816a1b00-02b2-4f02-ba01-e680c70d1ce8" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													08:00 AM - 08:30 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d26248bc-a7ac-4447-adcf-78f6c1942ec5" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													08:30 AM - 09:00 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9a40da00-7a9d-4d2c-98c6-2fb1475ce5ce" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													09:00 AM - 10:00 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c2d6b1e5-cc0d-4802-bf76-28676aaefb0a" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													10:00 AM - 10:30 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1a41ee8b-7a19-4d93-9291-bf19fc38d704" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													10:30 AM - 11:00 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/483c7911-01af-43ac-b976-34cdf4229e47" 
+												class="image4"
+											/>
+											<div class="view18">
+												<span class="text14" >
+													11:00 AM - 11:30 AM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/34d959ab-8b93-4f26-9e3e-8e786fe18d2a" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													11:30 AM - 12:00 PM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/404445c1-f75a-454e-ad73-b735974574e7" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													12:00 PM - 12:30 PM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c2e9eb08-edc6-4211-98bf-c3bba6584766" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													12:30 PM - 01:00 PM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/dc22a1c9-2c91-4006-b8c5-ffe61414bf55" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													01:00 PM - 01:30 PM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/139ea8a7-4b69-4bbb-8a79-9e5a5ae7b4f4" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													01:30 PM - 02:00 PM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e6c03a94-7a58-4bb6-935a-7f2b0074608b" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													02:00 PM - 02:30 PM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view8">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/61d12321-79fc-4131-9ed8-c5777aad6a17" 
+												class="image4"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													02:30 PM - 03:00 PM
+												</span>
+											</div>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="row-view9">
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9543c333-ecd0-4183-b32e-7123b024d6eb" 
+												class="image10"
+											/>
+											<div class="view17">
+												<span class="text14" >
+													03:00 PM - 03:30 PM
+												</span>
+											</div>
+										</div>
+										<div class="box3">
+										</div>
+										<div class="box3">
+										</div>
+										<div class="box3">
+										</div>
+										<div class="box3">
+										</div>
+										<div class="box3">
+										</div>
+										<div class="box3">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="view14">
+							<button class="button-row-view"
+								onclick="alert('Pressed!')"}>
+								<img
+									src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/841ef54d-eae1-485f-b787-deca11dd3624" 
+									class="image11"
+								/>
+								<span class="text15" >
+									Export Schedule
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MISQRGENERATOR2FINAL</title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.absolute-view {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border: 1px solid #00000000;
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+		.box {
+			width: 12px;
+			height: 12px;
+			background: #1EBBD7;
+			border-radius: 33554400px;
+			margin-right: 5px;
+		}
+		.box2 {
+			width: 12px;
+			height: 12px;
+			background: #1EBBD7;
+			border-radius: 33554400px;
+			margin-right: 4px;
+		}
+		.button {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 33554400px;
+			border: none;
+			padding: 14px;
+			margin-bottom: 38px;
+			box-shadow: 0px 4px 14px #1EBBD72E;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 10px;
+			border: 1px solid #E2E8F0;
+			padding: 8px;
+			box-shadow: 0px 1px 2px #0000001A;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #00000000;
+			border-radius: 16px;
+			border: none;
+			padding: 7px 16px;
+			box-shadow: 0px 2px 4px #0000001A;
+			text-align: left;
+		}
+		.button4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 18px;
+			margin-right: 40px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 999px;
+			border: none;
+			padding: 6px 18px;
+			margin-right: 142px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px;
+			text-align: left;
+		}
+		.button-row-view {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(180deg, #00C950, #00BC7D);
+			border-radius: 14px;
+			border: none;
+			padding: 11px 24px;
+			gap: 10px;
+			text-align: left;
+		}
+		.button-row-view2 {
+			display: flex;
+			align-items: center;
+			background: #1EBBD7;
+			border-radius: 14px;
+			border: none;
+			padding: 10px 20px;
+			margin-left: 51px;
+			gap: 8px;
+			box-shadow: 0px 2px 4px #0000001A;
+			text-align: left;
+		}
+		.column {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 8px;
+			margin-top: 80px;
+		}
+		.column2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 14px;
+			margin-bottom: 300px;
+		}
+		.column3 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 14px;
+			margin-bottom: 32px;
+			gap: 32px;
+		}
+		.column4 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+		}
+		.column5 {
+			align-self: stretch;
+			background: #FFFFFF;
+			padding-top: 4px;
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+		.column6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2px;
+		}
+		.column7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+		.column8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 37px;
+			gap: 24px;
+		}
+		.column9 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border-radius: 24px;
+			border: 3px solid #1EBBD7;
+			padding: 17px 33px;
+			gap: 20px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.column10 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #FFFFFF, #F9FAFB);
+			border-radius: 16px;
+			border: 2px solid #1EBBD7;
+			padding-top: 43px;
+			padding-bottom: 43px;
+			margin-right: 1px;
+			gap: 20px;
+		}
+		.column11 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #FFFFFF, #F9FAFB);
+			border-radius: 16px;
+			border: 2px solid #1EBBD7;
+			padding-top: 43px;
+			padding-bottom: 43px;
+			margin-right: 2px;
+			gap: 20px;
+		}
+		.column12 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #FFFFFF, #F9FAFB);
+			border-radius: 16px;
+			border: 2px solid #1EBBD7;
+			padding-top: 43px;
+			padding-bottom: 43px;
+			gap: 20px;
+		}
+		.column13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image2 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 52px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image3 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image4 {
+			border-radius: 10px;
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image5 {
+			border-radius: 14px;
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 14px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.image7 {
+			width: 40px;
+			height: 40px;
+			margin-right: 21px;
+			object-fit: fill;
+		}
+		.image8 {
+			width: 110px;
+			height: 80px;
+			margin-right: 195px;
+			object-fit: fill;
+		}
+		.image9 {
+			width: 38px;
+			height: 38px;
+			object-fit: fill;
+		}
+		.image10 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+		}
+		.row-view2 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 12px;
+		}
+		.row-view3 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.row-view4 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+		.row-view5 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.row-view6 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+		}
+		.row-view7 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			gap: 18px;
+		}
+		.row-view8 {
+			display: flex;
+			align-items: center;
+		}
+		.row-view9 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+		.row-view10 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 999px;
+			border: 1px solid #E2E8F0;
+			padding: 6px 7px;
+			gap: 10px;
+		}
+		.text {
+			color: #1E3A8A;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #0F172A;
+			font-size: 13px;
+		}
+		.text3 {
+			color: #1EBBD7;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.text4 {
+			color: #94A3B8;
+			font-size: 12px;
+		}
+		.text5 {
+			color: #1EBBD7;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #FFFFFF;
+			font-size: 13px;
+			font-weight: bold;
+		}
+		.text7 {
+			color: #FFFFFF;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text8 {
+			color: #1EBBD7;
+			font-size: 36px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #FFFFFF;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.text10 {
+			color: #000000;
+			font-size: 13px;
+		}
+		.text11 {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text12 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text13 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text14 {
+			color: #1EBBD7;
+			font-size: 11px;
+		}
+		.view {
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.view2 {
+			align-self: stretch;
+			background: #FFFFFF;
+			padding-top: 80px;
+		}
+		.view3 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 512px;
+		}
+		.view4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 436px;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 30px;
+		}
+		.view7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 1px;
+		}
+		.view8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.view9 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: linear-gradient(180deg, #FFFFFF, #F9FAFB);
+			border-radius: 16px;
+			border: 2px solid #1EBBD7;
+			padding-top: 44px;
+		}
+		.view10 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 49px;
+		}
+		.view11 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="view">
+			<div class="row-view">
+				<div class="column">
+					<div class="column2">
+						<button class="button"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3f4dcd41-d0c9-48e6-9011-320190c67822" 
+								class="image"
+							/>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c1983352-d2b9-48cc-929a-c9c1ba9aeac6" 
+							class="image2"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/693b3991-1e0c-44cb-931d-2eeeaf327bf4" 
+							class="image2"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9fc8255a-0e60-4272-8e7b-d6026885ac1f" 
+							class="image3"
+						/>
+					</div>
+					<div class="column3">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c58c4f88-badb-4c41-ae51-deabf012eb7e" 
+							class="image"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/51c1bccf-6471-4e58-a71a-5431e2e05ec1" 
+							class="image"
+						/>
+					</div>
+				</div>
+				<div class="column4">
+					<div class="view2">
+						<div class="column5">
+							<div class="row-view2">
+								<div class="column6">
+									<div class="view3">
+										<span class="text" >
+											QR Generator
+										</span>
+									</div>
+									<div class="view4">
+										<span class="text2" >
+											Generate QR codes for IT laboratory assets.
+										</span>
+									</div>
+								</div>
+								<div class="column7">
+									<div class="view5">
+										<span class="text3" >
+											10:41:46 PM
+										</span>
+									</div>
+									<div class="view6">
+										<span class="text4" >
+											Thursday, April 16, 2026
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="column8">
+								<div class="row-view3">
+									<div class="row-view4">
+										<button class="button2"
+											onclick="alert('Pressed!')"}>
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/edcd153b-05c1-486a-af8d-1fe7be61425b" 
+												class="image4"
+											/>
+										</button>
+										<div class="row-view5">
+											<div class="view7">
+												<span class="text5" >
+													Room 204
+												</span>
+											</div>
+											<button class="button3"
+												onclick="alert('Pressed!')"}>
+												<span class="text6" >
+													QR Room Key
+												</span>
+											</button>
+										</div>
+									</div>
+									<button class="button-row-view"
+										onclick="alert('Pressed!')"}>
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2ce37a67-9a0a-44e6-8c74-61d52db708d5" 
+											class="image5"
+										/>
+										<span class="text7" >
+											Generate QR ALL PC
+										</span>
+									</button>
+								</div>
+								<div class="column9">
+									<div class="row-view6">
+										<div class="column10">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 1
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/181212e9-12ee-4c90-bdbd-9d2e8fb8ff4d" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box">
+										</div>
+										<div class="column11">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 2
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/16dd5ed8-0879-4c44-b723-91ed3611be89" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="column10">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 3
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5e3f0218-0cf3-43cf-a42e-725fe6f62495" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box">
+										</div>
+										<div class="column11">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 4
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/77b611aa-d54e-471a-81ac-07c4c0ab3a01" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="column12">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 5
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3678a0d6-fa13-4157-8f91-af45d22e3470" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+									</div>
+									<div class="row-view6">
+										<div class="column10">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 6
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b0696c07-4ed6-422c-a234-10bc0c0964b3" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box">
+										</div>
+										<div class="column11">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 7
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f0e23c78-f25e-4675-8017-eee0320e4f3d" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="column10">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 8
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9479bf7e-5697-4d61-a4a4-587b2ee83f3b" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box">
+										</div>
+										<div class="column11">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 9
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7a0cd41e-b324-43ae-9fe4-0244e2ced855" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+										<div class="box2">
+										</div>
+										<div class="column12">
+											<div class="view8">
+												<div class="view5">
+													<span class="text8" >
+														PC 10
+													</span>
+												</div>
+											</div>
+											<button class="button-row-view2"
+												onclick="alert('Pressed!')"}>
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a73fd518-d060-4acf-90a2-99ceeba67adf" 
+													class="image6"
+												/>
+												<span class="text9" >
+													Generate QR
+												</span>
+											</button>
+										</div>
+									</div>
+									<div class="row-view7">
+										<div class="view9">
+											<div class="view5">
+												<span class="text8" >
+													PC 11
+												</span>
+											</div>
+										</div>
+										<div class="view9">
+											<div class="view5">
+												<span class="text8" >
+													PC 12
+												</span>
+											</div>
+										</div>
+										<div class="view9">
+											<div class="view5">
+												<span class="text8" >
+													PC 13
+												</span>
+											</div>
+										</div>
+										<div class="view9">
+											<div class="view5">
+												<span class="text8" >
+													PC 14
+												</span>
+											</div>
+										</div>
+										<div class="view9">
+											<div class="view5">
+												<span class="text8" >
+													PC 15
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute-view">
+						<div class="row-view8">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/78abcd68-4926-44a5-9697-45189a771762" 
+								class="image7"
+							/>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8a8d2178-2d10-4307-8743-bc072ce14405" 
+								class="image8"
+							/>
+							<button class="button4"
+								onclick="alert('Pressed!')"}>
+								<span class="text10" >
+									Dashboard
+								</span>
+							</button>
+							<button class="button4"
+								onclick="alert('Pressed!')"}>
+								<span class="text2" >
+									PC Reports
+								</span>
+							</button>
+							<button class="button4"
+								onclick="alert('Pressed!')"}>
+								<span class="text10" >
+									Maintenance Tracker
+								</span>
+							</button>
+							<button class="button5"
+								onclick="alert('Pressed!')"}>
+								<span class="text11" >
+									QR Generator
+								</span>
+							</button>
+							<div class="row-view9">
+								<img
+									src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a4e6735f-23a3-49e0-893e-4adbb4ac5cd9" 
+									class="image9"
+								/>
+								<div class="row-view10">
+									<button class="button6"
+										onclick="alert('Pressed!')"}>
+										<span class="text12" >
+											SG
+										</span>
+									</button>
+									<div class="column13">
+										<div class="view5">
+											<span class="text13" >
+												Santi Guevarra
+											</span>
+										</div>
+										<div class="view10">
+											<span class="text14" >
+												MIS Staff
+											</span>
+										</div>
+									</div>
+									<div class="view11">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6ce86bb2-fc83-4d3e-9cc3-a3dddaa1c052" 
+											class="image10"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

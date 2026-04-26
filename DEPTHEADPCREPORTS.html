@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DEPTHEADPCREPORTS</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+		}
+		body {
+			font-family: system-ui;
+		}
+		.box {
+			flex: 1;
+			align-self: stretch;
+		}
+		.box2 {
+			width: 40px;
+			height: 2px;
+			background: #00000000;
+			margin-bottom: 45px;
+			margin-left: 6px;
+		}
+		.box3 {
+			width: 10px;
+			height: 10px;
+			background: #4ADE80;
+			border-radius: 33554400px;
+		}
+		.box4 {
+			width: 10px;
+			height: 10px;
+			background: #FB923C;
+			border-radius: 33554400px;
+		}
+		.box5 {
+			width: 10px;
+			height: 10px;
+			background: #EF4444;
+			border-radius: 33554400px;
+		}
+		.box6 {
+			height: 6px;
+			align-self: stretch;
+			background: #E2E8F0;
+			margin-bottom: 4px;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		.box7 {
+			width: 4px;
+			height: 60px;
+			background: #EF4444;
+			border-radius: 33554400px;
+			margin-right: 8px;
+		}
+		.box8 {
+			width: 4px;
+			height: 60px;
+			background: #EF4444;
+			border-radius: 33554400px;
+		}
+		.box9 {
+			width: 4px;
+			height: 60px;
+			background: #F59E0B;
+			border-radius: 33554400px;
+			margin-right: 8px;
+		}
+		.box10 {
+			width: 4px;
+			height: 60px;
+			background: #10B981;
+			border-radius: 33554400px;
+			margin-right: 8px;
+		}
+		.view-low {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #D1FAE5;
+			border-radius: 33554400px;
+			padding: 1px 8px;
+		}
+		.text-low {
+			color: #047857;
+			font-size: 9px;
+			font-weight: bold;
+		}
+		.box11 {
+			width: 4px;
+			height: 60px;
+			background: #59B3FC;
+			border-radius: 33554400px;
+		}
+		.box12 {
+			width: 4px;
+			height: 60px;
+			background: #00D46A;
+			border-radius: 33554400px;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 18px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 13px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 999px;
+			border: none;
+			padding: 6px 17px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 9px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 9px;
+			margin-right: 39px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px;
+			text-align: left;
+		}
+		.button7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 33554400px;
+			border: none;
+			padding: 14px;
+			margin-bottom: 38px;
+			text-align: left;
+		}
+		.button8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 33804044px;
+			border: none;
+			padding: 13px;
+			margin-bottom: 37px;
+			text-align: left;
+		}
+		.button9 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E8F9FC;
+			border-radius: 33554400px;
+			border: none;
+			padding: 12px;
+			margin-right: 9px;
+			text-align: left;
+		}
+		.button10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FEF3C7;
+			border-radius: 33554400px;
+			border: none;
+			padding: 4px 10px;
+			text-align: left;
+		}
+		.button11 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #DBEAFE;
+			border-radius: 33554400px;
+			border: none;
+			padding: 4px 10px;
+			text-align: left;
+		}
+		.button12 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #D1FAE5;
+			border-radius: 33554400px;
+			border: none;
+			padding: 4px 10px;
+			text-align: left;
+		}
+		.button-row-view {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #1EBBD7;
+			border-radius: 14px;
+			border: none;
+			padding: 10px 16px;
+			gap: 10px;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			flex: 1;
+			min-height: 0;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border: 1px solid #FFFFFF;
+			gap: 6px;
+		}
+		.column2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-bottom: 32px;
+			padding-left: 20px;
+			padding-right: 8px;
+			margin-top: 22px;
+		}
+		.column4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 8px;
+			margin-bottom: 106px;
+		}
+		.column5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 14px;
+			gap: 32px;
+		}
+		.column6 {
+			flex: 1;
+			min-width: 0;
+			min-height: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+		.column7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2px;
+		}
+		.column8 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+		.column9 {
+			align-self: stretch;
+			flex: 1;
+			min-height: 0;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #E2E8F0;
+			padding-top: 1px;
+		}
+		.column10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-top: 1px;
+			gap: 2px;
+		}
+		.column11 {
+			flex: 1;
+			align-self: stretch;
+			min-width: 0;
+			min-height: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #E2E8F0;
+			padding-top: 11px;
+			padding-bottom: 0;
+			overflow: hidden;
+		}
+		.column11 > .row-view14 {
+			flex-shrink: 0;
+			align-self: center;
+		}
+		.column11 > .box6 {
+			flex-shrink: 0;
+		}
+		.column11 > .column12,
+		.column11 > .column18,
+		.column11 > .view20 {
+			flex: 1 1 0;
+			min-width: 0;
+			min-height: 0;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			padding-bottom: 11px;
+			box-sizing: border-box;
+		}
+		.column11 > .column12 > *,
+		.column11 > .column18 > *,
+		.column11 > .view20 > * {
+			box-sizing: border-box;
+			max-width: 100%;
+		}
+		.column12 {
+			align-self: stretch;
+			background: #FFFFFF;
+			border-bottom-right-radius: 14px;
+			border-bottom-left-radius: 14px;
+			padding-left: 13px;
+			padding-right: 13px;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		.column13 {
+			flex: 1;
+			min-width: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 10px;
+			gap: 4px;
+		}
+		.column13 > span,
+		.column15 > span,
+		.column16 > span {
+			max-width: 100%;
+			overflow-wrap: break-word;
+			word-break: break-word;
+		}
+		.column14 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 8px;
+		}
+		.column15 {
+			flex: 1;
+			min-width: 0;
+		}
+		.column16 {
+			flex: 1;
+			min-width: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 40px;
+		}
+		.column17 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column18 {
+			align-self: stretch;
+			background: #FFFFFF;
+			border-bottom-right-radius: 14px;
+			border-bottom-left-radius: 14px;
+			padding-left: 13px;
+			padding-right: 13px;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		.column19 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
+		.column20 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 3px;
+		}
+		.contain {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			overflow: hidden;
+		}
+		.image {
+			width: 40px;
+			height: 40px;
+			margin-right: 31px;
+			object-fit: fill;
+		}
+		.image2 {
+			width: 40px;
+			height: 40px;
+			margin-right: 17px;
+			object-fit: fill;
+		}
+		.image3 {
+			width: 38px;
+			height: 38px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.image5 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 38px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image7 {
+			border-radius: 33804044px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image8 {
+			border-radius: 33789616px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image9 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image10 {
+			border-radius: 33554400px;
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image11 {
+			border-radius: 14px;
+			width: 16px;
+			height: 16px;
+			margin-left: 19px;
+			margin-right: 21px;
+			object-fit: fill;
+		}
+		.image12 {
+			border-radius: 14px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.image13 {
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image14 {
+			border-radius: 33554400px;
+			width: 16px;
+			height: 16px;
+			margin-left: 18px;
+			object-fit: fill;
+		}
+		.image15 {
+			border-radius: 33554400px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.image16 {
+			border-radius: 33554400px;
+			width: 16px;
+			height: 16px;
+			margin-left: 32px;
+			object-fit: fill;
+		}
+		.image17 {
+			border-radius: 14px;
+			width: 52px;
+			height: 45px;
+			object-fit: fill;
+		}
+		.input {
+			color: #94A3B8;
+			font-size: 12px;
+			margin-right: 4px;
+			flex: 1;
+			align-self: stretch;
+			background: none;
+			border: none;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding: 21px 28px 10px 28px;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 999px;
+			border: 1px solid #E2E8F0;
+			padding: 6px 7px;
+			gap: 10px;
+		}
+		.row-view4 {
+			align-self: stretch;
+			flex: 1;
+			min-height: 0;
+			display: flex;
+			align-items: stretch;
+			margin-right: 28px;
+			gap: 10px;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.row-view6 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-top-left-radius: 14px;
+			border-top-right-radius: 14px;
+			border: 1px solid #FFFFFF;
+			padding: 12px 15px;
+			margin-left: 4px;
+			margin-right: 4px;
+		}
+		.row-view7 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+		}
+		.row-view8 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 14px;
+			gap: 6px;
+		}
+		.row-view9 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 15px;
+			gap: 6px;
+		}
+		.row-view10 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+		.row-view11 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 6px;
+			margin-left: 16px;
+			margin-right: 16px;
+			gap: 10px;
+		}
+		.row-view12 {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			border-radius: 14px;
+			border: 1px solid #E2E8F0;
+		}
+		.row-view13 {
+			align-self: stretch;
+			flex: 1;
+			min-height: 0;
+			display: flex;
+			align-items: stretch;
+			margin-bottom: 14px;
+			margin-left: 19px;
+			margin-right: 19px;
+			gap: 21px;
+		}
+		.row-view14 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+			gap: 12px;
+		}
+		.row-view15 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #FDE68A;
+			padding: 13px;
+			margin-bottom: 7px;
+		}
+		.row-view16 {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.row-view17 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #FDE68A;
+			padding: 11px 13px;
+			margin-bottom: 6px;
+			gap: 8px;
+		}
+		.row-view18 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 3px;
+		}
+		.row-view19 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 4px;
+		}
+		.row-view20 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #FDE68A;
+			padding: 12px 13px;
+			margin-bottom: 6px;
+		}
+		.row-view21 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 3px;
+			gap: 8px;
+		}
+		.row-view22 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 3px;
+		}
+		.row-view23 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #FDE68A;
+			padding-top: 13px;
+			padding-left: 13px;
+			padding-right: 13px;
+		}
+		.row-view24 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #FDE68A;
+			padding: 12px 13px;
+			margin-bottom: 7px;
+			gap: 8px;
+		}
+		.row-view25 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 4px;
+		}
+		.row-view26 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #FDE68A;
+			padding: 7px 13px;
+			gap: 8px;
+		}
+		.row-view27 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 1px solid #FDE68A;
+			padding: 12px 13px;
+			gap: 8px;
+		}
+		.text {
+			color: #000000;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #0F172A;
+			font-size: 13px;
+		}
+		.text3 {
+			color: #000000;
+			font-size: 13px;
+		}
+		.text4 {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text5 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text7 {
+			color: #1EBBD7;
+			font-size: 11px;
+		}
+		.text8 {
+			color: #1E3A8A;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #0F172A;
+			font-size: 11px;
+		}
+		.text10 {
+			color: #1EBBD7;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.text11 {
+			color: #94A3B8;
+			font-size: 12px;
+		}
+		.text12 {
+			color: #0F172A;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text13 {
+			color: #0F172A;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text14 {
+			color: #0F172A;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.text15 {
+			color: #0F172A;
+			font-size: 10px;
+		}
+		.text16 {
+			color: #1EBBD7;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text17 {
+			color: #EF4444;
+			font-size: 9px;
+			font-weight: bold;
+		}
+		.text18 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: 4px;
+		}
+		.text19 {
+			color: #F59E0B;
+			font-size: 9px;
+			font-weight: bold;
+		}
+		.text20 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		.view {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 26px;
+		}
+		.view3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 33789616px;
+			margin-bottom: 46px;
+			margin-left: 13px;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 33789616px;
+			margin-bottom: 52px;
+			margin-left: 13px;
+		}
+		.view6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 2px;
+			padding-right: 62px;
+		}
+		.view7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 2px;
+		}
+		.view8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 27px;
+			padding-right: 1px;
+		}
+		.view9 {
+			align-self: stretch;
+			flex: 1;
+			min-height: 0;
+			display: flex;
+			flex-direction: column;
+			background: #F8F8F8;
+			border-radius: 14px;
+			border: 1px solid #E2E8F0;
+			padding: 14px 11px;
+			box-sizing: border-box;
+		}
+		.view10 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 117px;
+		}
+		.view11 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #EF444414;
+			border-radius: 33554400px;
+			padding: 1px 8px;
+		}
+		.view13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 8px;
+		}
+		.view14 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 9px;
+		}
+		.view15 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #EF444414;
+			border-radius: 33554400px;
+			padding: 1px 8px;
+		}
+		.view16 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 12px;
+		}
+		.view17 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F59E0B14;
+			border-radius: 33554400px;
+			padding: 1px 8px;
+		}
+		.view18 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 1px;
+		}
+		.view19 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view20 {
+			align-self: stretch;
+			background: #FFFFFF;
+			border-bottom-right-radius: 14px;
+			border-bottom-left-radius: 14px;
+			padding-left: 13px;
+			padding-right: 13px;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		/* === UNIFIED DEPT HEAD NAVIGATION HEADER (LabSync) ===
+		   Identical layout across every department head page so
+		   the top bar does not shift when navigating. */
+		body {
+			margin: 0 !important;
+		}
+		.contain > .column {
+			padding-top: 0 !important;
+		}
+		.row-view {
+			display: flex !important;
+			align-items: center !important;
+			background: #FFFFFF !important;
+			padding: 14px 28px !important;
+			margin: 0 !important;
+			box-sizing: border-box !important;
+			border-bottom: 1px solid #E2E8F0 !important;
+			flex-shrink: 0 !important;
+			gap: 0 !important;
+		}
+		.row-view > .image,
+		.row-view > .image2 {
+			width: 40px !important;
+			height: 40px !important;
+			flex-shrink: 0 !important;
+			object-fit: contain !important;
+			margin: 0 12px 0 0 !important;
+		}
+		.row-view > .text {
+			flex-shrink: 0 !important;
+			color: #0F172A !important;
+			font-size: 18px !important;
+			font-weight: 700 !important;
+			margin: 0 !important;
+			line-height: 40px !important;
+		}
+		.row-view > .box {
+			flex: 1 1 auto !important;
+			min-width: 16px !important;
+		}
+		.row-view > button {
+			flex-shrink: 0 !important;
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			background: transparent !important;
+			border: 1px solid transparent !important;
+			border-radius: 999px !important;
+			padding: 8px 16px !important;
+			margin: 0 4px !important;
+			height: 36px !important;
+			box-shadow: none !important;
+			cursor: pointer !important;
+			text-align: center !important;
+		}
+		.row-view > button > span {
+			color: #0F172A !important;
+			font-size: 13px !important;
+			font-weight: 500 !important;
+			white-space: nowrap !important;
+		}
+		.row-view > button.dh-active {
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9) !important;
+			border-color: transparent !important;
+			box-shadow: 0 4px 10px rgba(14, 165, 201, 0.25) !important;
+		}
+		.row-view > button.dh-active > span {
+			color: #FFFFFF !important;
+		}
+		.row-view > button:hover:not(.dh-active) {
+			background: #F1F5F9 !important;
+		}
+		.row-view > .row-view2 {
+			margin-left: 16px !important;
+			flex-shrink: 0 !important;
+			align-items: center !important;
+		}
+		/* === END UNIFIED HEADER === */
+		/* === SIDEBAR ALIGNMENT (match DASHBOARD) === */
+		.column3 > .column4 > .image6 {
+			margin-bottom: 51px !important;
+			margin-left: 14px !important;
+		}
+		/* === END SIDEBAR ALIGNMENT === */
+		/* === TITLE / CLOCK ROW ALIGNMENT (match DASHBOARD) === */
+		.column6 > .row-view5 > .column7 > .view6 {
+			padding-top: 2px !important;
+			padding-right: 0 !important;
+			padding-bottom: 0 !important;
+		}
+		.column6 > .row-view5 > .column7 > .view7 {
+			padding-bottom: 1px !important;
+			padding-top: 0 !important;
+		}
+		.column6 > .row-view5 > .column7 > .view7 > .text9 {
+			color: #0F172A !important;
+			font-size: 13px !important;
+			font-weight: normal !important;
+		}
+		/* === END TITLE / CLOCK ROW ALIGNMENT === */
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="column">
+			<div class="row-view">
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/500e5cb2-d7e8-46a8-b3df-b32de0293902"
+					class="image"
+				/>
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a34380f0-d3c3-4c0f-92d5-51f5fc098d03"
+					class="image2"
+				/>
+				<span class="text" >
+					LabSync
+				</span>
+				<div class="box">
+				</div>
+				<button class="button"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						Dashboard
+					</span>
+				</button>
+				<button class="button2"
+					onclick="alert('Pressed!')"}>
+					<span class="text3" >
+						Room Status
+					</span>
+				</button>
+				<button class="button3 dh-active"
+					onclick="alert('Pressed!')"}>
+					<span class="text4" >
+						PC Reports
+					</span>
+				</button>
+				<button class="button2"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						My Schedule
+					</span>
+				</button>
+				<button class="button4"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						Master Schedule
+					</span>
+				</button>
+				<button class="button5"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						Faculty Management
+					</span>
+				</button>
+				<div class="row-view2">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bd93445e-b1c4-43b9-a1c1-0e48349459dc"
+						class="image3"
+					/>
+					<div class="row-view3">
+						<button class="button6"
+							onclick="alert('Pressed!')"}>
+							<span class="text5" >
+								SG
+							</span>
+						</button>
+						<div class="column2">
+							<div class="view">
+								<span class="text6" >
+									Santi Guevarra
+								</span>
+							</div>
+							<div class="view2">
+								<span class="text7" >
+									IT Dept. Head
+								</span>
+							</div>
+						</div>
+						<div class="view3">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/22b9dd79-4689-4fe2-89ea-b46ea91e450a"
+								class="image4"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-view4">
+				<div class="column3">
+					<div class="column4">
+						<button class="button7"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0e7b7135-45ff-49cf-b644-adfc5ee96f19"
+								class="image5"
+							/>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7e85dcc6-d092-48d4-bba0-3eddada44f25"
+							class="image6"
+						/>
+						<button class="button8"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4542ad76-1da2-4396-8fca-cfb691d6361b"
+								class="image7"
+							/>
+						</button>
+						<div class="view4">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5a1c5d98-18fd-47a6-95e5-ccffdbb15ce0"
+								class="image8"
+							/>
+						</div>
+						<div class="box2">
+						</div>
+						<div class="view5">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/93864b97-9550-4336-b8a3-801f6be8335c"
+								class="image8"
+							/>
+						</div>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0635dff2-15cb-4b4b-a41b-d80ae231e748"
+							class="image9"
+						/>
+					</div>
+					<div class="column5">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5b09331f-a2cf-4f16-97f8-cf14844af072"
+							class="image5"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8a57be40-4d78-43bb-ad41-5791382fe45f"
+							class="image5"
+						/>
+					</div>
+				</div>
+				<div class="column6">
+					<div class="row-view5">
+						<div class="column7">
+							<div class="view6">
+								<span class="text8" >
+									PC Issue Reports
+								</span>
+							</div>
+							<div class="view7">
+								<span class="text9" >
+									Student-submitted computer issues and maintenance reports
+								</span>
+							</div>
+						</div>
+						<div class="column8">
+							<div class="view">
+								<span class="text10" >
+									10:35:51 PM
+								</span>
+							</div>
+							<div class="view8">
+								<span class="text11" >
+									Thursday, April 16, 2026
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="view9">
+						<div class="column9">
+							<div class="row-view6">
+								<button class="button9"
+									onclick="alert('Pressed!')"}>
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/92e97173-16dd-4136-89ca-2c2f1032f07f"
+										class="image10"
+									/>
+								</button>
+								<div class="column10">
+									<div class="view10">
+										<span class="text12" >
+											PC Reports
+										</span>
+									</div>
+									<div class="view">
+										<span class="text9" >
+											Complete overview of all campus labs
+										</span>
+									</div>
+								</div>
+								<div class="box">
+								</div>
+								<div class="row-view7">
+									<div class="row-view8">
+										<div class="box3">
+										</div>
+										<span class="text13" >
+											Available
+										</span>
+									</div>
+									<div class="row-view9">
+										<div class="box4">
+										</div>
+										<span class="text13" >
+											Claimed
+										</span>
+									</div>
+									<div class="row-view10">
+										<div class="box5">
+										</div>
+										<span class="text13" >
+											In Use
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="row-view11">
+								<div class="row-view12">
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cf7c7f4c-c4ce-4c20-b77e-4af8f2eaa8e1"
+										class="image11"
+									/>
+									<input
+										type="text"
+										placeholder="Search by room, PC number, issue, student name, or class..."
+										class="input"
+									/>
+								</div>
+								<button class="button-row-view"
+									onclick="alert('Pressed!')"}>
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a14d4604-7b8c-457d-b740-908aaff6c054"
+										class="image12"
+									/>
+									<span class="text5" >
+										Generate Report
+									</span>
+								</button>
+							</div>
+							<div class="row-view13">
+								<div class="column11">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/95f2ae53-6f22-4461-a234-b64c8e85ee05"
+											class="image13"
+										/>
+										<div class="view11">
+											<span class="text14" >
+												Pending
+											</span>
+										</div>
+										<button class="button10"
+											onclick="alert('Pressed!')"}>
+											<span class="text6" >
+												5
+											</span>
+										</button>
+									</div>
+									<div class="box6">
+									</div>
+									<div class="column12">
+										<div class="row-view15">
+											<div class="box7">
+											</div>
+											<div class="column13">
+												<div class="row-view16">
+													<div class="view11">
+														<span class="text6" >
+															Room 205
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text16" >
+															PC-205-08
+														</span>
+													</div>
+												</div>
+												<span class="text6" >
+													NetBeans not working
+												</span>
+												<span class="text15" >
+													NetBeans IDE fails to launch, shows error message on startup
+												</span>
+											</div>
+											<div class="column14">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b4fc2460-1548-4ba9-85e0-aebb15ded907"
+													class="image14"
+												/>
+												<div class="view12">
+													<span class="text17" >
+														high
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="row-view17">
+											<div class="box8">
+											</div>
+											<div class="column15">
+												<div class="row-view18">
+													<div class="view13">
+														<span class="text6" >
+															Room 208
+														</span>
+													</div>
+													<div class="view14">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text16" >
+															PC-208-15
+														</span>
+													</div>
+													<div class="box">
+													</div>
+													<img
+														src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/31b5b02d-2c1f-4e79-9d03-12f3d882ecc8"
+														class="image15"
+													/>
+												</div>
+												<div class="row-view19">
+													<span class="text6" >
+														Cisco Packet Tracer not working
+													</span>
+													<div class="view15">
+														<span class="text17" >
+															high
+														</span>
+													</div>
+												</div>
+												<div class="view16">
+													<span class="text15" >
+														Application crashes when trying to create new network topology
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="row-view20">
+											<div class="box9">
+											</div>
+											<div class="column16">
+												<div class="row-view21">
+													<div class="view11">
+														<span class="text6" >
+															Room 206
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text16" >
+															PC-206-12
+														</span>
+													</div>
+												</div>
+												<span class="text18" >
+													Keyboard not working
+												</span>
+												<span class="text15" >
+													Several keys are stuck and not responding properly
+												</span>
+											</div>
+											<div class="column14">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1492d9bd-dba1-4a7e-8837-b05a9ff9eafb"
+													class="image16"
+												/>
+												<div class="view17">
+													<span class="text19" >
+														medium
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="row-view20">
+											<div class="box9">
+											</div>
+											<div class="column17">
+												<div class="row-view22">
+													<div class="view13">
+														<span class="text6" >
+															Room 205
+														</span>
+													</div>
+													<div class="view14">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<span class="text16" >
+														PC-205-14
+													</span>
+												</div>
+												<span class="text18" >
+													Visual Studio Code not launching
+												</span>
+												<span class="text15" >
+													VS Code shows loading screen but never opens completely
+												</span>
+											</div>
+											<div class="column14">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/38694c6e-e86e-4305-af8e-a3a2a1baf578"
+													class="image16"
+												/>
+												<div class="view17">
+													<span class="text19" >
+														medium
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="row-view20">
+											<div class="box10">
+											</div>
+											<div class="column16">
+												<div class="row-view21">
+													<div class="view11">
+														<span class="text6" >
+															Room 204
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text16" >
+															PC-204-03
+														</span>
+													</div>
+												</div>
+												<span class="text18" >
+													Headset jack not working
+												</span>
+												<span class="text15" >
+													Audio jack is not detecting headset, no sound output
+												</span>
+											</div>
+											<div class="column14">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c983c84b-6dbd-45e4-9ac7-d38b703c8364"
+													class="image16"
+												/>
+												<div class="view-low">
+													<span class="text-low" >
+														low
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="column11">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f6d3861e-0adc-4932-895d-bbbf5cd57c0a"
+											class="image13"
+										/>
+										<div class="view11">
+											<span class="text14" >
+												In Progress
+											</span>
+										</div>
+										<button class="button11"
+											onclick="alert('Pressed!')"}>
+											<span class="text6" >
+												2
+											</span>
+										</button>
+									</div>
+									<div class="box6">
+									</div>
+									<div class="column18">
+										<div class="row-view24">
+											<div class="box11">
+											</div>
+											<div class="column17">
+												<div class="row-view25">
+													<div class="view13">
+														<span class="text6" >
+															Room 205
+														</span>
+													</div>
+													<div class="view13">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text16" >
+															PC-205-08
+														</span>
+													</div>
+													<div class="box">
+													</div>
+													<img
+														src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0c4de505-35ad-4f00-853f-d1aa2760a53a"
+														class="image15"
+													/>
+												</div>
+												<span class="text20" >
+													NetBeans not working
+												</span>
+												<div class="view18">
+													<span class="text15" >
+														NetBeans IDE fails to launch, shows error message on startup
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="row-view17">
+											<div class="box11">
+											</div>
+											<div class="column17">
+												<div class="row-view18">
+													<div class="view13">
+														<span class="text6" >
+															Room 208
+														</span>
+													</div>
+													<div class="view14">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text16" >
+															PC-208-15
+														</span>
+													</div>
+													<div class="box">
+													</div>
+													<img
+														src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c3b96d46-ece6-4ceb-8e5a-a8c872c42779"
+														class="image15"
+													/>
+												</div>
+												<span class="text20" >
+													Cisco Packet Tracer not working
+												</span>
+												<div class="view19">
+													<span class="text15" >
+														Application crashes when trying to create new network topology
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="row-view26">
+											<div class="box11">
+											</div>
+											<div class="column19">
+												<div class="row-view5">
+													<div class="column20">
+														<div class="row-view16">
+															<div class="view11">
+																<span class="text6" >
+																	Room 206
+																</span>
+															</div>
+															<div class="view11">
+																<span class="text15" >
+																	•
+																</span>
+															</div>
+															<div class="view11">
+																<span class="text16" >
+																	PC-206-12
+																</span>
+															</div>
+														</div>
+														<span class="text6" >
+															Keyboard not working
+														</span>
+													</div>
+													<img
+														src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a12081b3-44ab-4291-bab1-44d910bb249b"
+														class="image17"
+													/>
+												</div>
+												<div class="view16">
+													<span class="text15" >
+														Several keys are stuck and not responding properly
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="column11">
+									<div class="row-view14">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4bbb421b-84dc-45cb-8cbb-384d171091a0"
+											class="image13"
+										/>
+										<div class="view11">
+											<span class="text14" >
+												Resolved
+											</span>
+										</div>
+										<button class="button12"
+											onclick="alert('Pressed!')"}>
+											<span class="text6" >
+												3
+											</span>
+										</button>
+									</div>
+									<div class="box6">
+									</div>
+									<div class="view20">
+										<div class="row-view27">
+											<div class="box12">
+											</div>
+											<div class="column17">
+												<div class="row-view25">
+													<div class="view13">
+														<span class="text6" >
+															Room 205
+														</span>
+													</div>
+													<div class="view13">
+														<span class="text15" >
+															•
+														</span>
+													</div>
+													<div class="view11">
+														<span class="text16" >
+															PC-205-08
+														</span>
+													</div>
+													<div class="box">
+													</div>
+													<img
+														src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/79cea194-7d02-4e37-8ce2-80f9f94f666b"
+														class="image15"
+													/>
+												</div>
+												<span class="text20" >
+													NetBeans not working
+												</span>
+												<div class="view18">
+													<span class="text15" >
+														NetBeans IDE fails to launch, shows error message on startup
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

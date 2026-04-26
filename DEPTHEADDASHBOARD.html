@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DEPTHEADDASHBOARD</title>
+	<style>
+			body {
+				margin: 0;
+				font-family: system-ui;
+				overflow: hidden;
+			}
+			html {
+				overflow: hidden;
+			}
+
+			/* --- Stats Card Component Styles --- */
+			.stats-cards {
+				display: flex;
+				width: 100%;
+				gap: 16px;
+				margin-bottom: 8px;
+			}
+			.stats-card {
+				flex: 1;
+				display: flex;
+				align-items: flex-start;
+				background: #fff;
+				border-radius: 18px;
+				box-shadow: 0 2px 8px #E5E7EB;
+				padding: 16px 20px;
+				border: 1px solid #E5E7EB;
+				min-width: 0;
+			}
+			.stats-card-content {
+				display: flex;
+				flex-direction: column;
+			}
+			.stats-card-number {
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.stats-card-title {
+				font-weight: bold;
+				color: #0F172A;
+				font-size: 16px;
+			}
+			.stats-card-subtitle {
+				color: #94A3B8;
+				font-size: 13px;
+			}
+			.stats-card-icon {
+				background: #E0F2FE;
+				border-radius: 16px;
+				padding: 12px;
+				margin-left: 16px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.stats-card-icon-green { background: #DCFCE7; }
+			.stats-card-icon-orange { background: #FEF3C7; }
+			.stats-card-icon-purple { background: #EDE9FE; }
+			.stats-card-number-blue { color: #0284C7; }
+			.stats-card-number-green { color: #22C55E; }
+			.stats-card-number-orange { color: #FB923C; }
+			.stats-card-number-purple { color: #A78BFA; }
+			.stats-card-icon img {
+				width: 22px;
+				height: 22px;
+			}
+			/* --- End Stats Card Component Styles --- */
+		.absolute-text {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			color: #0F172A;
+			font-size: 13px;
+			font-weight: bold;
+		}
+		.absolute-text2 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			color: #0F172A;
+			font-size: 11px;
+		}
+		.absolute-text3 {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			color: #0F172A;
+			font-size: 13px;
+			font-weight: bold;
+		}
+		.box {
+			flex: 1;
+			align-self: stretch;
+		}
+		.box2 {
+			width: 40px;
+			height: 2px;
+			background: #00000000;
+			margin-bottom: 45px;
+			margin-left: 6px;
+		}
+		.box3 {
+			width: 21px;
+			height: 16px;
+		}
+		.box4 {
+			width: 10px;
+			height: 10px;
+			background: #4ADE80;
+			border-radius: 33554400px;
+		}
+		.box5 {
+			width: 10px;
+			height: 10px;
+			background: #FB923C;
+			border-radius: 33554400px;
+		}
+		.box6 {
+			width: 10px;
+			height: 10px;
+			background: #EF4444;
+			border-radius: 33554400px;
+		}
+		.box7 {
+			height: 1px;
+			flex: 1;
+			background: #E2E8F0;
+			margin-right: 3px;
+		}
+		.box8 {
+			height: 1px;
+			flex: 1;
+			background: #E2E8F0;
+		}
+		.box9 {
+			width: 4px;
+			height: 4px;
+			background: #BE123C;
+			border-radius: 33554400px;
+		}
+		.box10 {
+			height: 1px;
+			align-self: stretch;
+			background: #D1D1D1;
+			margin-bottom: 5px;
+			margin-left: 15px;
+		}
+		.box11 {
+			width: 4px;
+			height: 4px;
+			background: #15803D;
+			border-radius: 33554400px;
+		}
+		.box12 {
+			width: 4px;
+			height: 4px;
+			background: #C2410C;
+			border-radius: 33554400px;
+		}
+		.box13 {
+			height: 1px;
+			align-self: stretch;
+			background: #D1D1D1;
+			margin-bottom: 6px;
+			margin-left: 14px;
+		}
+		.box14 {
+			height: 1px;
+			align-self: stretch;
+			background: #D1D1D1;
+			margin-bottom: 22px;
+			margin-left: 15px;
+		}
+		.box15 {
+			width: 12px;
+			box-sizing: border-box;
+			height: 12px;
+			box-sizing: border-box;
+			background: #0EA5C9;
+			border-radius: 33554400px;
+			border: 2px solid #FFFFFF;
+			margin-bottom: 92px;
+		}
+		.box16 {
+			width: 10px;
+			box-sizing: border-box;
+			height: 10px;
+			box-sizing: border-box;
+			background: #3B82F6;
+			border-radius: 33554400px;
+			border: 2px solid #FFFFFF;
+			margin-bottom: 95px;
+		}
+		.box17 {
+			width: 10px;
+			box-sizing: border-box;
+			height: 10px;
+			box-sizing: border-box;
+			background: #3B82F6;
+			border-radius: 33554400px;
+			border: 2px solid #FFFFFF;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 999px;
+			border: none;
+			padding: 6px 18px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 13px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 17px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 9px;
+			margin-right: 20px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 9px;
+			margin-right: 39px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px;
+			text-align: left;
+		}
+		.button7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 33554400px;
+			border: none;
+			padding: 14px;
+			margin-bottom: 38px;
+			box-shadow: 0px 4px 14px #1EBBD72E;
+			text-align: left;
+		}
+		.button8 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #4ADE80;
+			border-radius: 14px;
+			border: none;
+			padding: 11px 12px;
+			box-shadow: 0px 4px 14px #4ADE8033;
+			text-align: left;
+		}
+		.button9 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FB923C;
+			border-radius: 14px;
+			border: none;
+			padding: 11px 12px;
+			box-shadow: 0px 4px 14px #FB923C33;
+			text-align: left;
+		}
+		.button10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #A78BFA;
+			border-radius: 14px;
+			border: none;
+			padding: 11px 12px;
+			box-shadow: 0px 4px 14px #A78BFA33;
+			text-align: left;
+		}
+		.button11 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E8F9FC;
+			border-radius: 33554400px;
+			border: none;
+			padding: 12px;
+			text-align: left;
+		}
+		.button12 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E8F9FC;
+			border-radius: 33554400px;
+			border: none;
+			padding: 4px 12px;
+			margin-right: 4px;
+			text-align: left;
+		}
+		.button13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E8F9FC;
+			border-radius: 33554400px;
+			border: none;
+			padding: 8px;
+			margin-left: 15px;
+			margin-right: 10px;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border: 1px solid #FFFFFF;
+			gap: 6px;
+		}
+		.column2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-bottom: 32px;
+			padding-left: 20px;
+			padding-right: 8px;
+			margin-top: 22px;
+		}
+		.column4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 8px;
+			margin-bottom: 106px;
+		}
+		.column5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 14px;
+			gap: 32px;
+		}
+		.column6 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+		.column6 > .row-view6 {
+			align-self: stretch;
+			display: flex;
+			align-items: stretch;
+			gap: 24px;
+		}
+		.column7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2px;
+		}
+		.column8 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+		.column9 {
+			flex: 1;
+			min-width: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+			align-self: stretch;
+		}
+		.column10 {
+			flex: 1;
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: transparent;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			margin-right: 0;
+			box-shadow: none;
+		}
+		.column11 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+		}
+		.column12 {
+			align-self: stretch;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+		}
+		.column13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			position: relative;
+		}
+		.column14 {
+			align-self: stretch;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			margin-top: 0;
+			padding-top: 11px;
+			box-shadow: 0px 1px 2px #0F172A08;
+		}
+		.column15 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1px;
+		}
+		.column16 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #FFE4E6, #FECDD3);
+			border-radius: 16px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-right: 15px;
+		}
+		.column17 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #AEFFCA;
+			border-radius: 16px;
+			padding-top: 14px;
+			padding-bottom: 14px;
+			padding-right: 15px;
+			box-shadow: 0px 4px 16px #0F172A03;
+		}
+		.column18 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F9BA80;
+			border-radius: 16px;
+			padding-top: 15px;
+			padding-right: 14px;
+			box-shadow: 0px 4px 16px #0F172A03;
+		}
+		.column19 {
+			flex: 0 0 400px;
+			max-width: 400px;
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding-bottom: 6px;
+			gap: 10px;
+			box-shadow: 0px 1px 2px #0F172A08;
+		}
+		.column20 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 0;
+		}
+		.column21 {
+			flex-shrink: 0;
+			align-items: flex-start;
+			margin-left: 0;
+		}
+		.column22 {
+			flex: 1;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 8px;
+			gap: 12px;
+		}
+		.column23 {
+			align-self: center;
+			width: calc(100% - 18px);
+			max-width: 360px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E0F2FE;
+			border-radius: 12px;
+			padding: 14px 18px;
+			box-sizing: border-box;
+		}
+		.column24 {
+			align-self: center;
+			width: calc(100% - 18px);
+			max-width: 360px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #DBEAFE;
+			border-radius: 14px;
+			padding: 16px 18px;
+			box-sizing: border-box;
+		}
+		.column25 {
+			align-self: center;
+			width: calc(100% - 18px);
+			max-width: 360px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #DBEAFE;
+			border-radius: 14px;
+			padding: 16px 18px;
+			box-sizing: border-box;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			width: 40px;
+			height: 40px;
+			margin-right: 31px;
+			object-fit: fill;
+		}
+		.image2 {
+			width: 40px;
+			height: 40px;
+			margin-right: 17px;
+			object-fit: fill;
+		}
+		.image3 {
+			width: 38px;
+			height: 38px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.image5 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 51px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image7 {
+			border-radius: 33804044px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image8 {
+			border-radius: 33789616px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image9 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image10 {
+			border-radius: 14px;
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image11 {
+			border-radius: 33554400px;
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding: 21px 28px 10px 28px;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 999px;
+			border: 1px solid #E2E8F0;
+			padding: 6px 7px;
+			gap: 10px;
+		}
+		.row-view4 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			margin-right: 28px;
+			gap: 10px;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.row-view6 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #F8F8F8;
+			border-radius: 14px;
+			border: 1px solid #E2E8F0;
+			padding: 20px 18px;
+			gap: 27px;
+		}
+		.column12 > .row-view6 {
+			align-self: stretch;
+			display: block;
+			background: transparent;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			gap: 0;
+		}
+		.row-view7 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			border-radius: 16px;
+		}
+		.row-view8 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 5px;
+			margin-left: 17px;
+		}
+		.row-view9 {
+			flex: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 24px 17px;
+			margin-right: 21px;
+			box-shadow: 0px 1px 2px #0F172A08;
+		}
+		.row-view10 {
+			flex: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 24px 17px;
+			margin-right: 23px;
+			box-shadow: 0px 1px 2px #0F172A08;
+		}
+		.row-view11 {
+			flex: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 24px 17px;
+			box-shadow: 0px 1px 2px #0F172A08;
+		}
+		.row-view12 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 5px;
+			margin-left: 21px;
+			margin-right: 21px;
+		}
+		.row-view13 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+		}
+		.row-view14 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 14px;
+			gap: 5px;
+		}
+		.row-view15 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 15px;
+			gap: 5px;
+		}
+		.row-view16 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		.row-view17 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-top: 5px;
+			margin-bottom: 11px;
+			margin-left: 34px;
+			margin-right: 34px;
+		}
+		.row-view18 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 11px;
+			margin-left: 10px;
+			margin-right: 10px;
+			gap: 8px;
+		}
+		.row-view19 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: 33554400px;
+			margin-bottom: 12px;
+			margin-left: 15px;
+		}
+		.row-view20 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFFB0;
+			border-radius: 33554400px;
+			padding: 4px 8px;
+			gap: 4px;
+		}
+		.row-view21 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 6px;
+			margin-left: 15px;
+		}
+		.row-view22 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 7px;
+			margin-left: 15px;
+		}
+		.row-view23 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 3px;
+			margin-left: 15px;
+			gap: 6px;
+		}
+		.row-view24 {
+			display: flex;
+			align-items: center;
+			margin-left: 15px;
+			gap: 5px;
+		}
+		.row-view25 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFFB0;
+			border-radius: 33554400px;
+			padding: 4px 8px;
+			gap: 3px;
+		}
+		.row-view26 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 6px;
+			margin-left: 15px;
+			gap: 6px;
+		}
+		.row-view27 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-left: 15px;
+		}
+		.row-view28 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 33px;
+			margin-left: 15px;
+			gap: 6px;
+		}
+		.row-view29 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-top: 16px;
+			margin-bottom: 24px;
+			margin-left: 10px;
+			margin-right: 10px;
+			gap: 8px;
+		}
+		.row-view30 {
+			align-self: stretch;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			border-top-left-radius: 14px;
+			border-top-right-radius: 14px;
+			border: 1px solid #EDEDED;
+			padding: 12px 16px;
+			box-sizing: border-box;
+		}
+		.row-view31 {
+			align-self: stretch;
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			padding: 0 12px 0 12px;
+			box-sizing: border-box;
+		}
+		.row-view32 {
+			align-self: stretch;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 8px;
+		}
+		.row-view33 {
+			align-self: stretch;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.text {
+			color: #000000;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text3 {
+			color: #000000;
+			font-size: 13px;
+		}
+		.text4 {
+			color: #0F172A;
+			font-size: 13px;
+		}
+		.text5 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text7 {
+			color: #1EBBD7;
+			font-size: 11px;
+		}
+		.text8 {
+			color: #1E3A8A;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #1EBBD7;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.text10 {
+			color: #94A3B8;
+			font-size: 12px;
+		}
+		.text11 {
+			color: #0284C7;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.text12 {
+			color: #4ADE80;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.text13 {
+			color: #FB923C;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.text14 {
+			color: #A78BFA;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.text15 {
+			color: #0F172A;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text16 {
+			color: #0F172A;
+			font-size: 11px;
+		}
+		.text17 {
+			color: #475569;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text18 {
+			color: #BE123C;
+			font-size: 8px;
+			font-weight: bold;
+		}
+		.text19 {
+			color: #0F172A;
+			font-size: 8px;
+			font-weight: bold;
+		}
+		.text20 {
+			color: #0F172A;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text21 {
+			color: #DC2626;
+			font-size: 9px;
+			font-weight: bold;
+		}
+		.text22 {
+			color: #000000;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text23 {
+			color: #9F1239;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text24 {
+			color: #15803D;
+			font-size: 8px;
+			font-weight: bold;
+		}
+		.text25 {
+			color: #15803D;
+			font-size: 8px;
+			font-weight: bold;
+			margin-bottom: 6px;
+			margin-left: 15px;
+		}
+		.text26 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: 9px;
+			margin-left: 15px;
+		}
+		.text27 {
+			color: #0284C7;
+			font-size: 9px;
+			font-weight: bold;
+		}
+		.text28 {
+			color: #C2410C;
+			font-size: 8px;
+			font-weight: bold;
+		}
+		.text29 {
+			color: #C2410C;
+			font-size: 8px;
+			font-weight: bold;
+			margin-bottom: 6px;
+			margin-left: 15px;
+		}
+		.text30 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: 8px;
+			margin-left: 15px;
+		}
+		.text31 {
+			color: #0F172A;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.text32 {
+			color: #0F172A;
+			font-size: 10px;
+			margin-right: 12px;
+		}
+		.text33 {
+			color: #0369A1;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text34 {
+			color: #0284C7;
+			font-size: 11px;
+			font-weight: 800;
+		}
+		.text35 {
+			color: #0284C7;
+			font-size: 14px;
+			font-weight: bold;
+			margin-bottom: 2px;
+		}
+		.text36 {
+			color: #64748B;
+			font-size: 12px;
+		}
+		.text37 {
+			color: #64748B;
+			font-size: 12px;
+		}
+		.text38 {
+			color: #94A3B8;
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: 4px;
+		}
+		.text39 {
+			color: #64748B;
+			font-size: 12px;
+			margin-right: 180px;
+		}
+		.view {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 26px;
+		}
+		.view3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 33804044px;
+			margin-bottom: 51px;
+			margin-left: 13px;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 33789616px;
+			margin-bottom: 46px;
+			margin-left: 13px;
+		}
+		.view6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 33789616px;
+			margin-bottom: 52px;
+			margin-left: 13px;
+		}
+		.view7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 2px;
+		}
+		.view8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 27px;
+			padding-right: 1px;
+		}
+		.view9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 17px;
+		}
+		.view10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		/* === UNIFIED DEPT HEAD NAVIGATION HEADER (LabSync) ===
+		   Identical layout across every department head page so
+		   the top bar does not shift when navigating. */
+		body {
+			margin: 0 !important;
+		}
+		.contain > .column {
+			padding-top: 0 !important;
+		}
+		.row-view {
+			display: flex !important;
+			align-items: center !important;
+			background: #FFFFFF !important;
+			padding: 14px 28px !important;
+			margin: 0 !important;
+			box-sizing: border-box !important;
+			border-bottom: 1px solid #E2E8F0 !important;
+			flex-shrink: 0 !important;
+			gap: 0 !important;
+		}
+		.row-view > .image,
+		.row-view > .image2 {
+			width: 40px !important;
+			height: 40px !important;
+			flex-shrink: 0 !important;
+			object-fit: contain !important;
+			margin: 0 12px 0 0 !important;
+		}
+		.row-view > .text {
+			flex-shrink: 0 !important;
+			color: #0F172A !important;
+			font-size: 18px !important;
+			font-weight: 700 !important;
+			margin: 0 !important;
+			line-height: 40px !important;
+		}
+		.row-view > .box {
+			flex: 1 1 auto !important;
+			min-width: 16px !important;
+		}
+		.row-view > button {
+			flex-shrink: 0 !important;
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			background: transparent !important;
+			border: 1px solid transparent !important;
+			border-radius: 999px !important;
+			padding: 8px 16px !important;
+			margin: 0 4px !important;
+			height: 36px !important;
+			box-shadow: none !important;
+			cursor: pointer !important;
+			text-align: center !important;
+		}
+		.row-view > button > span {
+			color: #0F172A !important;
+			font-size: 13px !important;
+			font-weight: 500 !important;
+			white-space: nowrap !important;
+		}
+		.row-view > button.dh-active {
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9) !important;
+			border-color: transparent !important;
+			box-shadow: 0 4px 10px rgba(14, 165, 201, 0.25) !important;
+		}
+		.row-view > button.dh-active > span {
+			color: #FFFFFF !important;
+		}
+		.row-view > button:hover:not(.dh-active) {
+			background: #F1F5F9 !important;
+		}
+		.row-view > .row-view2 {
+			margin-left: 16px !important;
+			flex-shrink: 0 !important;
+			align-items: center !important;
+		}
+		/* === END UNIFIED HEADER === */
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="column">
+			<div class="row-view">
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/87ced057-35ad-4590-ab9f-a4f9111149ca"
+					class="image"
+				/>
+				<img
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b11c7572-0b96-4d10-8a19-d07a9de1bce5"
+					class="image2"
+				/>
+				<span class="text" >
+					LabSync
+				</span>
+				<div class="box">
+				</div>
+				<button class="button dh-active"
+					onclick="alert('Pressed!')"}>
+					<span class="text2" >
+						Dashboard
+					</span>
+				</button>
+				<button class="button2"
+					onclick="alert('Pressed!')"}>
+					<span class="text3" >
+						Room Status
+					</span>
+				</button>
+				<button class="button3"
+					onclick="alert('Pressed!')"}>
+					<span class="text4" >
+						PC Reports
+					</span>
+				</button>
+				<button class="button2"
+					onclick="alert('Pressed!')"}>
+					<span class="text4" >
+						My Schedule
+					</span>
+				</button>
+				<button class="button4"
+					onclick="alert('Pressed!')"}>
+					<span class="text4" >
+						Master Schedule
+					</span>
+				</button>
+				<button class="button5"
+					onclick="alert('Pressed!')"}>
+					<span class="text4" >
+						Faculty Management
+					</span>
+				</button>
+				<div class="row-view2">
+					<img
+						src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a1371beb-db8c-47d5-b1d8-1772821bcc80"
+						class="image3"
+					/>
+					<div class="row-view3">
+						<button class="button6"
+							onclick="alert('Pressed!')"}>
+							<span class="text5" >
+								SG
+							</span>
+						</button>
+						<div class="column2">
+							<div class="view">
+								<span class="text6" >
+									Santi Guevarra
+								</span>
+							</div>
+							<div class="view2">
+								<span class="text7" >
+									IT Dept. Head
+								</span>
+							</div>
+						</div>
+						<div class="view3">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bfce6e9d-cf62-408e-9f47-f58a58d7faea"
+								class="image4"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-view4">
+				<div class="column3">
+					<div class="column4">
+						<button class="button7"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e4114f3d-664a-4443-86df-e906ce3101f8"
+								class="image5"
+							/>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d5bf13b2-4190-47ad-82a4-e3fd84c0d430"
+							class="image6"
+						/>
+						<div class="view4">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1d6d10a5-046b-4270-84a7-5a66749266ef"
+								class="image7"
+							/>
+						</div>
+						<div class="view5">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4a275a5f-904c-43ec-abbb-fda6b47e64fa"
+								class="image8"
+							/>
+						</div>
+						<div class="box2">
+						</div>
+						<div class="view6">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/89d25f6f-1267-4956-a7c0-dbb383538b9c"
+								class="image8"
+							/>
+						</div>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3df7f01d-0750-45c6-ab17-d2b6920d4adc"
+							class="image9"
+						/>
+					</div>
+					<div class="column5">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/be9d6c8d-c964-44d3-beac-0ff565f61676"
+							class="image5"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/541e97d9-a9cd-4c28-9d82-82f0c1e92013"
+							class="image5"
+						/>
+					</div>
+				</div>
+				<div class="column6">
+					<div class="row-view5">
+						<div class="column7">
+							<div class="view7">
+								<span class="text8" >
+									Good Evening, Santi!
+								</span>
+							</div>
+							<div class="view">
+								<span class="text4" >
+									Here's an overview of your IT laboratories today.
+								</span>
+							</div>
+						</div>
+						<div class="column8">
+							<div class="view">
+								<span class="text9" >
+									10:35:51 PM
+								</span>
+							</div>
+							<div class="view8">
+								<span class="text10" >
+									Thursday, April 16, 2026
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row-view6">
+						<div class="column9">
+							<div class="stats-cards">
+								<!-- Total Lab Rooms -->
+								<div class="stats-card">
+									<div class="stats-card-content">
+										<div class="stats-card-number stats-card-number-blue">6</div>
+										<div class="stats-card-title">Total Lab Rooms</div>
+										<div class="stats-card-subtitle">All facilities</div>
+									</div>
+									<div style="flex:1"></div>
+									<div class="stats-card-icon">
+										<img src="https://img.icons8.com/ios-filled/40/0284C7/monitor.png" alt="Lab Rooms">
+									</div>
+								</div>
+								<!-- Available Labs -->
+								<div class="stats-card">
+									<div class="stats-card-content">
+										<div class="stats-card-number stats-card-number-green">3</div>
+										<div class="stats-card-title">Available Labs</div>
+										<div class="stats-card-subtitle">Ready for Use</div>
+									</div>
+									<div style="flex:1"></div>
+									<div class="stats-card-icon stats-card-icon-green">
+										<img src="https://img.icons8.com/ios-filled/40/22C55E/ok.png" alt="Available">
+									</div>
+								</div>
+								<!-- Occupied Labs -->
+								<div class="stats-card">
+									<div class="stats-card-content">
+										<div class="stats-card-number stats-card-number-orange">2</div>
+										<div class="stats-card-title">Occupied Labs</div>
+										<div class="stats-card-subtitle">Currently in Use</div>
+									</div>
+									<div style="flex:1"></div>
+									<div class="stats-card-icon stats-card-icon-orange">
+										<img src="https://img.icons8.com/ios-filled/40/FB923C/error--v1.png" alt="Occupied">
+									</div>
+								</div>
+								<!-- Classes Today -->
+								<div class="stats-card">
+									<div class="stats-card-content">
+										<div class="stats-card-number stats-card-number-purple">4</div>
+										<div class="stats-card-title">Classes Today</div>
+										<div class="stats-card-subtitle">Scheduled Sessions</div>
+									</div>
+									<div style="flex:1"></div>
+									<div class="stats-card-icon stats-card-icon-purple">
+										<img src="https://img.icons8.com/ios-filled/40/A78BFA/calendar--v1.png" alt="Classes">
+									</div>
+								</div>
+							</div>
+							<div class="column14">
+								<div class="row-view12">
+									<div class="row-view2">
+										<button class="button11"
+											onclick="alert('Pressed!')"}>
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5cf0e4b2-a4c2-4ca1-8067-56aaff9c69e6"
+												class="image11"
+											/>
+										</button>
+										<div class="column15">
+											<div class="view">
+												<span class="text15" >
+													My Laboratories
+												</span>
+											</div>
+											<div class="view9">
+												<span class="text16" >
+													Real-time room status
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="row-view13">
+										<div class="row-view14">
+											<div class="box4">
+											</div>
+											<span class="text17" >
+												Available
+											</span>
+										</div>
+										<div class="row-view15">
+											<div class="box5">
+											</div>
+											<span class="text17" >
+												Claimed
+											</span>
+										</div>
+										<div class="row-view16">
+											<div class="box6">
+											</div>
+											<span class="text17" >
+												In Use
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="row-view17">
+									<div class="box7">
+									</div>
+									<button class="button12"
+										onclick="alert('Pressed!')"}>
+										<span class="text6" >
+											2nd Floor
+										</span>
+									</button>
+									<div class="box8">
+									</div>
+								</div>
+								<div class="row-view18">
+									<div class="column16">
+										<div class="row-view19">
+											<span class="text15" >
+												Room 204
+											</span>
+											<div class="row-view20">
+												<div class="box9">
+												</div>
+												<span class="text18" >
+													In Use
+												</span>
+											</div>
+										</div>
+										<div class="row-view21">
+											<div class="view10">
+												<span class="text19" >
+													Professor
+												</span>
+											</div>
+											<div class="view10">
+												<span class="text20" >
+													Prof. Garcia
+												</span>
+											</div>
+										</div>
+										<div class="row-view22">
+											<span class="text19" >
+												Subject
+											</span>
+											<span class="text20" >
+												Programming 1
+											</span>
+										</div>
+										<div class="box10">
+										</div>
+										<div class="row-view23">
+											<span class="text21" >
+												⚠️
+											</span>
+											<span class="text21" >
+												2 keyboards not working
+											</span>
+										</div>
+										<div class="row-view24">
+											<span class="text22" >
+												🕖
+											</span>
+											<span class="text23" >
+												1 hr 20 mins remaining
+											</span>
+										</div>
+									</div>
+									<div class="column17">
+										<div class="row-view19">
+											<span class="text15" >
+												Room 205
+											</span>
+											<div class="row-view25">
+												<div class="box11">
+												</div>
+												<span class="text24" >
+													available
+												</span>
+											</div>
+										</div>
+										<span class="text25" >
+											No Active Session
+										</span>
+										<span class="text26" >
+											Ready for Use
+										</span>
+										<div class="box10">
+										</div>
+										<div class="row-view26">
+											<span class="text21" >
+												⚠️
+											</span>
+											<span class="text21" >
+												Netbeans not Working
+											</span>
+										</div>
+										<div class="row-view27">
+											<span class="text19" >
+												Next Class
+											</span>
+											<span class="text27" >
+												2:00 PM
+											</span>
+										</div>
+									</div>
+									<div class="column18">
+										<div class="row-view19">
+											<span class="text15" >
+												Room 206
+											</span>
+											<div class="row-view20">
+												<div class="box12">
+												</div>
+												<span class="text28" >
+													claimed
+												</span>
+											</div>
+										</div>
+										<span class="text29" >
+											Reserved
+										</span>
+										<span class="text30" >
+											Reserved for next class
+										</span>
+										<div class="box13">
+										</div>
+										<div class="row-view28">
+											<span class="text21" >
+												⚠️
+											</span>
+											<span class="text21" >
+												Netbeans not Working
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="row-view17">
+									<div class="box7">
+									</div>
+									<button class="button12"
+										onclick="alert('Pressed!')"}>
+										<span class="text6" >
+											3rd Floor
+										</span>
+									</button>
+									<div class="box8">
+									</div>
+								</div>
+								<div class="row-view29">
+									<div class="column17">
+										<div class="row-view19">
+											<span class="text15" >
+												Room 304
+											</span>
+											<div class="row-view25">
+												<div class="box11">
+												</div>
+												<span class="text24" >
+													available
+												</span>
+											</div>
+										</div>
+										<span class="text25" >
+											No Active Session
+										</span>
+										<span class="text26" >
+											Ready for Use
+										</span>
+										<div class="box14">
+										</div>
+										<div class="row-view27">
+											<span class="text19" >
+												Next Class
+											</span>
+											<span class="text27" >
+												5:00 PM
+											</span>
+										</div>
+									</div>
+									<div class="column18">
+										<div class="row-view19">
+											<span class="text15" >
+												Room 305
+											</span>
+											<div class="row-view20">
+												<div class="box12">
+												</div>
+												<span class="text28" >
+													claimed
+												</span>
+											</div>
+										</div>
+										<span class="text29" >
+											Reserved
+										</span>
+										<span class="text30" >
+											Reserved for next class
+										</span>
+										<div class="box13">
+										</div>
+										<div class="row-view28">
+											<span class="text21" >
+												⚠️
+											</span>
+											<span class="text21" >
+												Cisco Packet Tracer not working
+											</span>
+										</div>
+									</div>
+									<div class="column16">
+										<div class="row-view19">
+											<span class="text15" >
+												Room 306
+											</span>
+											<div class="row-view20">
+												<div class="box9">
+												</div>
+												<span class="text18" >
+													In Use
+												</span>
+											</div>
+										</div>
+										<div class="row-view21">
+											<div class="view10">
+												<span class="text19" >
+													Professor
+												</span>
+											</div>
+											<div class="view10">
+												<span class="text20" >
+													Prof. Santos
+												</span>
+											</div>
+										</div>
+										<div class="row-view22">
+											<span class="text19" >
+												Subject
+											</span>
+											<span class="text20" >
+												Data Structures
+											</span>
+										</div>
+										<div class="box10">
+										</div>
+										<div class="row-view23">
+											<span class="text21" >
+												⚠️
+											</span>
+											<span class="text21" >
+												2 keyboards not working
+											</span>
+										</div>
+										<div class="row-view24">
+											<span class="text22" >
+												🕖
+											</span>
+											<span class="text23" >
+												2hrs 20 mins remaining
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="column19">
+							<div class="row-view30">
+								<button class="button13"
+									onclick="alert('Pressed!')"}>
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d1afe2eb-c5d1-46f8-9fde-96b75b6c49be"
+										class="image11"
+									/>
+								</button>
+								<div class="column20">
+									<span class="text31" >
+										My Schedule
+									</span>
+									<span class="text32" >
+										Todays’s classes
+									</span>
+								</div>
+							</div>
+							<div class="row-view31">
+								<div class="column22">
+									<div class="column23">
+										<div class="row-view32">
+											<span class="text33" >
+												10:00 AM - 11:30 AM
+											</span>
+											<span class="text34" >
+												Now
+											</span>
+										</div>
+										<span class="text35" >
+											Database Management
+										</span>
+										<div class="row-view33">
+											<span class="text36" >
+												Lab 302
+											</span>
+											<span class="text37" >
+												25 students
+											</span>
+										</div>
+									</div>
+									<div class="column24">
+										<span class="text38" >
+											1:00 PM - 2:30 PM
+										</span>
+										<span class="text35" >
+											Network Security
+										</span>
+										<div class="row-view33">
+											<span class="text39" >
+												Lab 303
+											</span>
+											<span class="text37" >
+												25 students
+											</span>
+										</div>
+									</div>
+									<div class="column25">
+										<span class="text38" >
+											3:00 PM - 4:30 PM
+										</span>
+										<span class="text35" >
+											Mobile Development
+										</span>
+										<div class="row-view33">
+											<span class="text39" >
+												Lab 304
+											</span>
+											<span class="text37" >
+												22 students
+											</span>
+										</div>
+									</div>
+									<div class="column24">
+										<span class="text38" >
+											1:00 PM - 2:30 PM
+										</span>
+										<span class="text35" >
+											Network Security
+										</span>
+										<div class="row-view33">
+											<span class="text39" >
+												Lab 303
+											</span>
+											<span class="text37" >
+												25 students
+											</span>
+										</div>
+									</div>
+									<div class="column25">
+										<span class="text38" >
+											3:00 PM - 4:30 PM
+										</span>
+										<span class="text35" >
+											Mobile Development
+										</span>
+										<div class="row-view33">
+											<span class="text39" >
+												Lab 304
+											</span>
+											<span class="text37" >
+												22 students
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

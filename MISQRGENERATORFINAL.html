@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MISQRGENERATORFINAL</title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.absolute-view {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border: 1px solid #00000000;
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+		.box {
+			height: 1px;
+			flex: 1;
+			background: #E2E8F0;
+			margin-right: 5px;
+		}
+		.box2 {
+			height: 1px;
+			flex: 1;
+			background: #E2E8F0;
+		}
+		.button {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 33554400px;
+			border: none;
+			padding: 14px;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E8F9FC;
+			border-radius: 33554400px;
+			border: none;
+			padding: 4px 39px;
+			margin-right: 6px;
+			text-align: left;
+		}
+		.button3 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #00000000;
+			border-radius: 16px;
+			border: none;
+			padding: 18px 13px;
+			text-align: left;
+		}
+		.button4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #00000000;
+			border-radius: 16px;
+			border: none;
+			padding: 18px 12px;
+			text-align: left;
+		}
+		.button5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E8F9FC;
+			border-radius: 33554400px;
+			border: none;
+			padding: 4px 40px;
+			margin-right: 6px;
+			text-align: left;
+		}
+		.button6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 18px;
+			margin-right: 40px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 999px;
+			border: none;
+			padding: 6px 18px;
+			margin-right: 142px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button8 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px;
+			text-align: left;
+		}
+		.column {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 8px;
+			margin-top: 80px;
+		}
+		.column2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 14px;
+			margin-bottom: 300px;
+		}
+		.column3 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 14px;
+			margin-bottom: 32px;
+			gap: 32px;
+		}
+		.column4 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+		}
+		.column5 {
+			align-self: stretch;
+			background: #FFFFFF;
+			padding-top: 4px;
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+		.column6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2px;
+		}
+		.column7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+		.column8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 32px;
+			gap: 20px;
+		}
+		.column9 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 4px;
+		}
+		.column10 {
+			align-self: stretch;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+		.column11 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 24px;
+			border: 2px solid #E2E8F0;
+			padding-top: 26px;
+			padding-bottom: 26px;
+			gap: 11px;
+		}
+		.column12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 3px;
+		}
+		.column13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 52px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image2 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 38px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image3 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 40px;
+			height: 40px;
+			margin-right: 21px;
+			object-fit: fill;
+		}
+		.image5 {
+			width: 110px;
+			height: 80px;
+			margin-right: 195px;
+			object-fit: fill;
+		}
+		.image6 {
+			width: 38px;
+			height: 38px;
+			object-fit: fill;
+		}
+		.image7 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			background: #FFFFFF;
+		}
+		.row-view2 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 12px;
+		}
+		.row-view3 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 32px;
+		}
+		.row-view4 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 31px;
+			gap: 12px;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+		.row-view6 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.row-view7 {
+			display: flex;
+			align-items: center;
+		}
+		.row-view8 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+		.row-view9 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 999px;
+			border: 1px solid #E2E8F0;
+			padding: 6px 7px;
+			gap: 10px;
+		}
+		.text {
+			color: #1E3A8A;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #0F172A;
+			font-size: 13px;
+		}
+		.text3 {
+			color: #1EBBD7;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.text4 {
+			color: #94A3B8;
+			font-size: 12px;
+		}
+		.text5 {
+			color: #0F172A;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #94A3B8;
+			font-size: 13px;
+		}
+		.text7 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text8 {
+			color: #FFFFFF;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #0F172A;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text10 {
+			color: #1EBBD7;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text11 {
+			color: #000000;
+			font-size: 13px;
+		}
+		.text12 {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text13 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text14 {
+			color: #1EBBD7;
+			font-size: 11px;
+		}
+		.view {
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.view2 {
+			align-self: stretch;
+			background: #FFFFFF;
+			padding-top: 80px;
+		}
+		.view3 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 512px;
+		}
+		.view4 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 436px;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 30px;
+		}
+		.view7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 1px;
+		}
+		.view8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+		.view9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 23px;
+			padding-right: 23px;
+		}
+		.view10 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 11px;
+			padding-right: 11px;
+		}
+		.view11 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 22px;
+			padding-right: 22px;
+		}
+		.view12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 49px;
+		}
+		.view13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="view">
+			<div class="row-view">
+				<div class="column">
+					<div class="column2">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2f1d8cfb-cae0-46d7-8e73-9e475429dc26" 
+							class="image"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/eb425395-bac4-4c67-97ea-a000a0f8df5f" 
+							class="image"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b6e30654-ceb1-42d1-98b6-98d043b15537" 
+							class="image2"
+						/>
+						<button class="button"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/52555c37-fcea-4c1b-b5a9-a527ee59e71f" 
+								class="image3"
+							/>
+						</button>
+					</div>
+					<div class="column3">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/38eaa2f9-5774-48e8-936f-cc776f112020" 
+							class="image3"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1bbc95ec-f507-4ed4-be03-b85e28e59414" 
+							class="image3"
+						/>
+					</div>
+				</div>
+				<div class="column4">
+					<div class="view2">
+						<div class="column5">
+							<div class="row-view2">
+								<div class="column6">
+									<div class="view3">
+										<span class="text" >
+											QR Generator
+										</span>
+									</div>
+									<div class="view4">
+										<span class="text2" >
+											Generate QR codes for IT laboratory assets.
+										</span>
+									</div>
+								</div>
+								<div class="column7">
+									<div class="view5">
+										<span class="text3" >
+											10:41:46 PM
+										</span>
+									</div>
+									<div class="view6">
+										<span class="text4" >
+											Thursday, April 16, 2026
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="column8">
+								<div class="column9">
+									<div class="view7">
+										<span class="text5" >
+											Select Laboratory Room
+										</span>
+									</div>
+									<div class="view5">
+										<span class="text6" >
+											Choose a room to generate QR codes for its computers
+										</span>
+									</div>
+								</div>
+								<div class="column10">
+									<div class="row-view3">
+										<div class="box">
+										</div>
+										<button class="button2"
+											onclick="alert('Pressed!')"}>
+											<span class="text7" >
+												2nd Floor
+											</span>
+										</button>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view4">
+										<div class="column11">
+											<button class="button3"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													203
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 203
+													</span>
+												</div>
+												<div class="view8">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view9">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="column11">
+											<button class="button4"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													204
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 204
+													</span>
+												</div>
+												<div class="view8">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view9">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="column11">
+											<button class="button3"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													205
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 205
+													</span>
+												</div>
+												<div class="view8">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view9">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="column11">
+											<button class="button3"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													206
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 206
+													</span>
+												</div>
+												<div class="view8">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view9">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row-view5">
+										<div class="box">
+										</div>
+										<button class="button5"
+											onclick="alert('Pressed!')"}>
+											<span class="text7" >
+												3rd Floor
+											</span>
+										</button>
+										<div class="box2">
+										</div>
+									</div>
+									<div class="row-view6">
+										<div class="column11">
+											<button class="button4"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													303
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 303
+													</span>
+												</div>
+												<div class="view10">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view11">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="column11">
+											<button class="button4"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													304
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 304
+													</span>
+												</div>
+												<div class="view8">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view9">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="column11">
+											<button class="button4"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													305
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 305
+													</span>
+												</div>
+												<div class="view8">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view9">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="column11">
+											<button class="button3"
+												onclick="alert('Pressed!')"}>
+												<span class="text8" >
+													306
+												</span>
+											</button>
+											<div class="column12">
+												<div class="view5">
+													<span class="text9" >
+														Room 306
+													</span>
+												</div>
+												<div class="view8">
+													<span class="text4" >
+														Building B
+													</span>
+												</div>
+												<div class="view9">
+													<span class="text10" >
+														15 PCs
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute-view">
+						<div class="row-view7">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ff78c1aa-1aaf-4659-8851-9de96b6ea014" 
+								class="image4"
+							/>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f83378ce-f0a3-4b36-bce9-615999a14e99" 
+								class="image5"
+							/>
+							<button class="button6"
+								onclick="alert('Pressed!')"}>
+								<span class="text11" >
+									Dashboard
+								</span>
+							</button>
+							<button class="button6"
+								onclick="alert('Pressed!')"}>
+								<span class="text2" >
+									PC Reports
+								</span>
+							</button>
+							<button class="button6"
+								onclick="alert('Pressed!')"}>
+								<span class="text11" >
+									Maintenance Tracker
+								</span>
+							</button>
+							<button class="button7"
+								onclick="alert('Pressed!')"}>
+								<span class="text12" >
+									QR Generator
+								</span>
+							</button>
+							<div class="row-view8">
+								<img
+									src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cf65345e-6e2d-4712-b3b7-c72b3cabbf64" 
+									class="image6"
+								/>
+								<div class="row-view9">
+									<button class="button8"
+										onclick="alert('Pressed!')"}>
+										<span class="text13" >
+											SG
+										</span>
+									</button>
+									<div class="column13">
+										<div class="view5">
+											<span class="text7" >
+												Santi Guevarra
+											</span>
+										</div>
+										<div class="view12">
+											<span class="text14" >
+												MIS Staff
+											</span>
+										</div>
+									</div>
+									<div class="view13">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a5f94596-9e90-4ebf-9bc9-c21572a98d40" 
+											class="image7"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

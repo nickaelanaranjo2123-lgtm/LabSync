@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MISDASHBOARD</title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.absolute-column {
+			position: absolute;
+			bottom: -7px;
+			right: -1px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-top: 4px;
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+		.absolute-column2 {
+			position: absolute;
+			bottom: -7px;
+			left: 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 8px;
+		}
+		.absolute-view {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			align-self: stretch;
+			background: #FFFFFF;
+			border: 1px solid #00000000;
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+		.box {
+			height: 813px;
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.box2 {
+			flex: 1;
+			align-self: stretch;
+		}
+		.box3 {
+			width: 6px;
+			height: 6px;
+			background: #F57C00;
+			border-radius: 33554400px;
+		}
+		.box4 {
+			width: 6px;
+			height: 6px;
+			background: #1976D2;
+			border-radius: 33554400px;
+		}
+		.box5 {
+			width: 6px;
+			height: 6px;
+			background: #2E7D32;
+			border-radius: 33554400px;
+		}
+		.box6 {
+			width: 8px;
+			height: 6px;
+			background: #F57C00;
+			border-radius: 33554400px;
+			margin-bottom: 65px;
+		}
+		.box7 {
+			width: 8px;
+			height: 6px;
+			background: #1976D2;
+			border-radius: 33554400px;
+			margin-bottom: 50px;
+		}
+		.box8 {
+			width: 8px;
+			height: 6px;
+			background: #E53935;
+			border-radius: 33554400px;
+			margin-bottom: 50px;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 999px;
+			border: none;
+			padding: 6px 17px;
+			margin-right: 40px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 17px;
+			margin-right: 40px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 999px;
+			border: 1px solid #FFFFFF;
+			padding: 6px 17px;
+			margin-right: 141px;
+			box-shadow: 0px 4px 4px #00000040;
+			text-align: left;
+		}
+		.button4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #1EBBD7, #0EA5C9);
+			border-radius: 33554400px;
+			border: none;
+			padding: 7px;
+			text-align: left;
+		}
+		.button5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #00000000;
+			border-radius: 16px;
+			border: none;
+			padding: 14px;
+			text-align: left;
+		}
+		.button6 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFEBEE;
+			border-radius: 10px;
+			border: none;
+			padding: 4px 10px;
+			margin-right: 47px;
+			text-align: left;
+		}
+		.button7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #E3F2FD;
+			border-radius: 10px;
+			border: none;
+			padding: 3px 10px;
+			margin-right: 49px;
+			text-align: left;
+		}
+		.button8 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFEBEE;
+			border-radius: 10px;
+			border: none;
+			padding: 3px 10px;
+			margin-right: 47px;
+			text-align: left;
+		}
+		.button9 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFF3E0;
+			border-radius: 10px;
+			border: none;
+			padding: 3px 10px;
+			margin-right: 45px;
+			text-align: left;
+		}
+		.button10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F3E5F5;
+			border-radius: 10px;
+			border: none;
+			padding: 3px 10px;
+			margin-right: 53px;
+			text-align: left;
+		}
+		.button11 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: none;
+			border-radius: 10px;
+			border: 1px solid #E2E8F0;
+			padding: 4px 12px;
+			text-align: left;
+		}
+		.button12 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 10px;
+			border: none;
+			padding: 3px 11px;
+			text-align: left;
+		}
+		.button13 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1EBBD7;
+			border-radius: 33554400px;
+			border: none;
+			padding: 14px;
+			margin-bottom: 38px;
+			box-shadow: 0px 4px 14px #1EBBD72E;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+		}
+		.column2 {
+			align-self: stretch;
+			background: #FFFFFF;
+			padding-left: 80px;
+			position: relative;
+		}
+		.column3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 420px;
+			gap: 2px;
+		}
+		.column5 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+		.column6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F8FAFC;
+			border-radius: 24px;
+			border: 1px solid #E2E8F0;
+			padding: 25px;
+			margin-bottom: 27px;
+			gap: 16px;
+			box-shadow: 0px 1px 4px #0F172A08;
+		}
+		.column7 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 6px;
+		}
+		.column8 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 1px;
+			box-shadow: 0px 2px 8px #00000008;
+		}
+		.column9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #00000000;
+			border-bottom: 1px solid #E2E8F0;
+			padding: 16px;
+			gap: 12px;
+		}
+		.column10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 600px;
+			gap: 2px;
+		}
+		.column11 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-right: 240px;
+		}
+		.column13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 17px;
+			gap: 16px;
+			box-shadow: 0px 2px 8px #00000008;
+		}
+		.column14 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-bottom: 1px solid #E2E8F0;
+			padding-bottom: 13px;
+			gap: 2px;
+		}
+		.column15 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 104px;
+		}
+		.column16 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 4px;
+			padding-right: 51px;
+		}
+		.column17 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 4px;
+			padding-right: 46px;
+		}
+		.column18 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 4px;
+			padding-right: 40px;
+		}
+		.column19 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 14px;
+			margin-bottom: 300px;
+		}
+		.column20 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 14px;
+			margin-bottom: 32px;
+			gap: 32px;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			width: 40px;
+			height: 40px;
+			margin-right: 21px;
+			object-fit: fill;
+		}
+		.image2 {
+			width: 110px;
+			height: 80px;
+			object-fit: fill;
+		}
+		.image3 {
+			width: 38px;
+			height: 38px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.image5 {
+			border-radius: 16px;
+			width: 28px;
+			height: 28px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 10px;
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		}
+		.image7 {
+			width: 16px;
+			height: 16px;
+			margin-left: 12px;
+			margin-right: 12px;
+			object-fit: fill;
+		}
+		.image8 {
+			width: 12px;
+			height: 12px;
+			object-fit: fill;
+		}
+		.image9 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image10 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 52px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.image11 {
+			border-radius: 33554400px;
+			width: 24px;
+			height: 24px;
+			margin-left: 14px;
+			object-fit: fill;
+		}
+		.input {
+			color: #0A0A0A;
+			font-size: 12px;
+			margin-right: 4px;
+			width: 835px;
+			box-sizing: border-box;
+			background: none;
+			border: none;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 999px;
+			border: 1px solid #E2E8F0;
+			padding: 6px 7px;
+			gap: 10px;
+		}
+		.row-view4 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		.row-view5 {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+		.row-view6 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(180deg, #FFFFFF, #E0F7FA33);
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 17px;
+			gap: 16px;
+		}
+		.row-view7 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(180deg, #FFFFFF, #FFECB333);
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 17px;
+			gap: 16px;
+		}
+		.row-view8 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(180deg, #FFFFFF, #FFEBEE33);
+			border-radius: 16px;
+			border: 1px solid #E2E8F0;
+			padding: 17px;
+			gap: 16px;
+		}
+		.row-view9 {
+			display: flex;
+			align-items: center;
+			gap: 17px;
+		}
+		.row-view10 {
+			display: flex;
+			align-items: center;
+		}
+		.row-view11 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			border-radius: 10px;
+			padding: 4px 11px;
+			gap: 7px;
+		}
+		.row-view12 {
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 14px;
+			border: 2px solid #E2E8F0;
+		}
+		.row-view13 {
+			display: flex;
+			align-items: center;
+			background: #F8FAFC;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		.row-view14 {
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #E2E8F0;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		.row-view15 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 53px;
+			gap: 6px;
+		}
+		.row-view16 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFF3E0;
+			border-radius: 10px;
+			padding: 4px 10px;
+			gap: 4px;
+		}
+		.row-view17 {
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #E2E8F0;
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+		.row-view18 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 57px;
+			gap: 6px;
+		}
+		.row-view19 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #E3F2FD;
+			border-radius: 10px;
+			padding: 3px 10px;
+			gap: 4px;
+		}
+		.row-view20 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 55px;
+			gap: 6px;
+		}
+		.row-view21 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #E8F5E9;
+			border-radius: 10px;
+			padding: 3px 10px;
+			gap: 4px;
+		}
+		.row-view22 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-right: 54px;
+			gap: 6px;
+		}
+		.row-view23 {
+			display: flex;
+			align-items: center;
+			background: #F8FAFC;
+			border-top: 1px solid #E2E8F0;
+			padding: 14px 16px;
+		}
+		.row-view24 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.row-view25 {
+			display: flex;
+			align-items: center;
+			border-radius: 14px;
+			padding: 10px;
+			margin-bottom: 13px;
+			gap: 12px;
+		}
+		.row-view26 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 4px;
+			gap: 6px;
+		}
+		.row-view27 {
+			display: flex;
+			align-items: center;
+			border-radius: 14px;
+			padding: 9px 10px;
+			margin-bottom: 12px;
+			gap: 12px;
+		}
+		.row-view28 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 3px;
+			gap: 6px;
+		}
+		.row-view29 {
+			display: flex;
+			align-items: center;
+			border-radius: 14px;
+			padding: 10px;
+			gap: 12px;
+		}
+		.text {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text2 {
+			color: #0F172A;
+			font-size: 13px;
+		}
+		.text3 {
+			color: #000000;
+			font-size: 13px;
+		}
+		.text4 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text5 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #1EBBD7;
+			font-size: 11px;
+		}
+		.text7 {
+			color: #1E3A8A;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text8 {
+			color: #1EBBD7;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #94A3B8;
+			font-size: 12px;
+		}
+		.text10 {
+			color: #0F172A;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.text11 {
+			color: #475569;
+			font-size: 12px;
+		}
+		.text12 {
+			color: #0F172A;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.text13 {
+			color: #94A3B8;
+			font-size: 11px;
+		}
+		.text14 {
+			color: #1EBBD7;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text15 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+			margin-left: 16px;
+			margin-right: 59px;
+		}
+		.text16 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+			margin-right: 69px;
+		}
+		.text17 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+			margin-right: 65px;
+		}
+		.text18 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+			margin-right: 68px;
+		}
+		.text19 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+			margin-right: 76px;
+		}
+		.text20 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+			margin-right: 134px;
+		}
+		.text21 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+			margin-right: 89px;
+		}
+		.text22 {
+			color: #1EBBD7;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text23 {
+			color: #E53935;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text24 {
+			color: #F57C00;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text25 {
+			color: #1976D2;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text26 {
+			color: #2E7D32;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text27 {
+			color: #8E24AA;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text28 {
+			color: #475569;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text29 {
+			color: #FFFFFF;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text30 {
+			color: #94A3B8;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.text31 {
+			color: #0F172A;
+			font-size: 12px;
+			font-weight: bold;
+			width: 194px;
+		}
+		.view {
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.view2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view3 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 49px;
+		}
+		.view4 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 2px;
+			padding-right: 546px;
+		}
+		.view6 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 29px;
+			padding-right: 1px;
+		}
+		.view7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 1px;
+			padding-right: 187px;
+		}
+		.view8 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 181px;
+		}
+		.view9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 1px;
+			padding-right: 212px;
+		}
+		.view10 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 186px;
+		}
+		.view11 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 1px;
+			padding-right: 186px;
+		}
+		.view12 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 187px;
+		}
+		.view13 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 52px;
+		}
+		.view14 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-left: 16px;
+			margin-right: 36px;
+		}
+		.view15 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 60px;
+		}
+		.view16 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 59px;
+		}
+		.view17 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-left: 16px;
+			margin-right: 47px;
+		}
+		.view18 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 61px;
+		}
+		.view19 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-left: 16px;
+			margin-right: 43px;
+		}
+		.view20 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 55px;
+		}
+		.view21 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-left: 16px;
+			margin-right: 44px;
+		}
+		.view22 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-right: 627px;
+		}
+		.view23 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 126px;
+		}
+		.view24 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			padding-right: 113px;
+		}
+		.view25 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+		}
+		.view26 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-bottom: 2px;
+		}
+		.view27 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 1px;
+			margin-bottom: 1px;
+		}
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="view">
+			<div class="column">
+				<div class="column2">
+					<div class="box">
+					</div>
+					<div class="absolute-view">
+						<div class="row-view">
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/70f02ac0-6096-4716-9b27-8bc033674549" 
+								class="image"
+							/>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/95b08b0b-09ad-4f4d-9f4c-34c7305f35f4" 
+								class="image2"
+							/>
+							<div class="box2">
+							</div>
+							<button class="button"
+								onclick="alert('Pressed!')"}>
+								<span class="text" >
+									Dashboard
+								</span>
+							</button>
+							<button class="button2"
+								onclick="alert('Pressed!')"}>
+								<span class="text2" >
+									PC Reports
+								</span>
+							</button>
+							<button class="button2"
+								onclick="alert('Pressed!')"}>
+								<span class="text3" >
+									Maintenance Tracker
+								</span>
+							</button>
+							<button class="button3"
+								onclick="alert('Pressed!')"}>
+								<span class="text3" >
+									QR Generator
+								</span>
+							</button>
+							<div class="row-view2">
+								<img
+									src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6b752a8-b6aa-4284-a359-4f6149712117" 
+									class="image3"
+								/>
+								<div class="row-view3">
+									<button class="button4"
+										onclick="alert('Pressed!')"}>
+										<span class="text4" >
+											SG
+										</span>
+									</button>
+									<div class="column3">
+										<div class="view2">
+											<span class="text5" >
+												Santi Guevarra
+											</span>
+										</div>
+										<div class="view3">
+											<span class="text6" >
+												MIS Staff
+											</span>
+										</div>
+									</div>
+									<div class="view4">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f4d83c67-ad68-4025-a580-44ba51513f42" 
+											class="image4"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="absolute-column">
+					<div class="row-view4">
+						<div class="column4">
+							<div class="view5">
+								<span class="text7" >
+									Dashboard
+								</span>
+							</div>
+							<div class="view2">
+								<span class="text2" >
+									Manage system-wide hardware reports, administrative tasks, and the technical integrity of all IT laboratory spaces.
+								</span>
+							</div>
+						</div>
+						<div class="column5">
+							<div class="view2">
+								<span class="text8" >
+									10:41:46 PM
+								</span>
+							</div>
+							<div class="view6">
+								<span class="text9" >
+									Thursday, April 16, 2026
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="column6">
+						<div class="row-view5">
+							<div class="row-view6">
+								<button class="button5"
+									onclick="alert('Pressed!')"}>
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a4a80e19-47d2-481f-96ef-41e942b26ddf" 
+										class="image5"
+									/>
+								</button>
+								<div class="column7">
+									<div class="view7">
+										<span class="text10" >
+											33 | 14 Active
+										</span>
+									</div>
+									<div class="view8">
+										<span class="text11" >
+											System Connectivity
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="row-view7">
+								<button class="button5"
+									onclick="alert('Pressed!')"}>
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9b93636d-cece-40f6-8aa1-ccdc931d9332" 
+										class="image5"
+									/>
+								</button>
+								<div class="column7">
+									<div class="view9">
+										<span class="text10" >
+											8 | 15 Total
+										</span>
+									</div>
+									<div class="view10">
+										<span class="text11" >
+											Pending PC Reports
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="row-view8">
+								<button class="button5"
+									onclick="alert('Pressed!')"}>
+									<img
+										src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6589ef23-ad80-421c-9070-3857a84760df" 
+										class="image5"
+									/>
+								</button>
+								<div class="column7">
+									<div class="view11">
+										<span class="text10" >
+											5 In-Progress
+										</span>
+									</div>
+									<div class="view12">
+										<span class="text11" >
+											Active Maintenance
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row-view9">
+							<div class="column8">
+								<div class="column9">
+									<div class="row-view10">
+										<div class="column10">
+											<div class="view13">
+												<span class="text12" >
+													Recent PC Reports
+												</span>
+											</div>
+											<div class="view2">
+												<span class="text13" >
+													Track and manage all reported issues
+												</span>
+											</div>
+										</div>
+										<div class="row-view11">
+											<span class="text14" >
+												View All
+											</span>
+											<img
+												src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6aa321f2-4047-4d94-b862-a2375bcbf73a" 
+												class="image6"
+											/>
+										</div>
+									</div>
+									<div class="row-view12">
+										<img
+											src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9e1a5f13-3bb5-4cbe-9e67-cc9b2bf428c9" 
+											class="image7"
+										/>
+										<input
+											type="text"
+											placeholder="Search by ticket ID, room, or issue type..."
+											class="input"
+										/>
+									</div>
+								</div>
+								<div class="column11">
+									<div class="row-view13">
+										<span class="text15" >
+											Ticket ID
+										</span>
+										<span class="text16" >
+											Date & Time
+										</span>
+										<span class="text17" >
+											Lab Room
+										</span>
+										<span class="text18" >
+											PC ID
+										</span>
+										<span class="text19" >
+											Issue Type
+										</span>
+										<span class="text20" >
+											Status
+										</span>
+										<span class="text21" >
+											Action
+										</span>
+									</div>
+									<div class="column12">
+										<div class="row-view14">
+											<div class="view14">
+												<span class="text22" >
+													TKT-1024
+												</span>
+											</div>
+											<div class="row-view15">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/552101e3-cff2-4830-82c6-88bd4121b665" 
+													class="image8"
+												/>
+												<span class="text11" >
+													Apr 2, 2:45 PM
+												</span>
+											</div>
+											<div class="view15">
+												<span class="text5" >
+													Room 204
+												</span>
+											</div>
+											<div class="view16">
+												<span class="text11" >
+													PC-012
+												</span>
+											</div>
+											<button class="button6"
+												onclick="alert('Pressed!')"}>
+												<span class="text23" >
+													Hardware
+												</span>
+											</button>
+											<div class="row-view16">
+												<div class="box3">
+												</div>
+												<span class="text24" >
+													Pending
+												</span>
+											</div>
+										</div>
+										<div class="row-view17">
+											<div class="view17">
+												<span class="text22" >
+													LS-1041
+												</span>
+											</div>
+											<div class="row-view18">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/55d33862-43cd-4ecb-8e67-8e12b2ab7b34" 
+													class="image8"
+												/>
+												<span class="text11" >
+													10 Dec, 2020
+												</span>
+											</div>
+											<div class="view18">
+												<span class="text5" >
+													Room 205
+												</span>
+											</div>
+											<div class="view16">
+												<span class="text11" >
+													PC-012
+												</span>
+											</div>
+											<button class="button7"
+												onclick="alert('Pressed!')"}>
+												<span class="text25" >
+													Software
+												</span>
+											</button>
+											<div class="row-view19">
+												<div class="box4">
+												</div>
+												<span class="text25" >
+													In Progress
+												</span>
+											</div>
+										</div>
+										<div class="row-view17">
+											<div class="view19">
+												<span class="text22" >
+													LS-1040
+												</span>
+											</div>
+											<div class="row-view20">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6a969b83-cb56-4d0b-a9a6-11988da476cc" 
+													class="image8"
+												/>
+												<span class="text11" >
+													09 Dec, 2020
+												</span>
+											</div>
+											<div class="view15">
+												<span class="text5" >
+													Room 204
+												</span>
+											</div>
+											<div class="view20">
+												<span class="text11" >
+													PC-008
+												</span>
+											</div>
+											<button class="button8"
+												onclick="alert('Pressed!')"}>
+												<span class="text23" >
+													Hardware
+												</span>
+											</button>
+											<div class="row-view21">
+												<div class="box5">
+												</div>
+												<span class="text26" >
+													Resolved
+												</span>
+											</div>
+										</div>
+										<div class="row-view17">
+											<div class="view21">
+												<span class="text22" >
+													LS-1039
+												</span>
+											</div>
+											<div class="row-view20">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ee4cb3e0-0137-4f61-9676-7144b8b97800" 
+													class="image8"
+												/>
+												<span class="text11" >
+													09 Dec, 2020
+												</span>
+											</div>
+											<div class="view18">
+												<span class="text5" >
+													Room 205
+												</span>
+											</div>
+											<div class="view16">
+												<span class="text11" >
+													PC-015
+												</span>
+											</div>
+											<button class="button9"
+												onclick="alert('Pressed!')"}>
+												<span class="text24" >
+													Peripheral
+												</span>
+											</button>
+											<div class="row-view21">
+												<div class="box5">
+												</div>
+												<span class="text26" >
+													Resolved
+												</span>
+											</div>
+										</div>
+										<div class="row-view17">
+											<div class="view21">
+												<span class="text22" >
+													LS-1038
+												</span>
+											</div>
+											<div class="row-view22">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6b83065b-3fcc-4a4c-925c-d0442f802ace" 
+													class="image8"
+												/>
+												<span class="text11" >
+													08 Dec, 2020
+												</span>
+											</div>
+											<div class="view18">
+												<span class="text5" >
+													Room 206
+												</span>
+											</div>
+											<div class="view20">
+												<span class="text11" >
+													PC-003
+												</span>
+											</div>
+											<button class="button10"
+												onclick="alert('Pressed!')"}>
+												<span class="text27" >
+													Network
+												</span>
+											</button>
+											<div class="row-view21">
+												<div class="box5">
+												</div>
+												<span class="text26" >
+													Resolved
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row-view23">
+									<div class="view22">
+										<span class="text13" >
+											Showing  5  of  15 reports
+										</span>
+									</div>
+									<div class="row-view24">
+										<button class="button11"
+											onclick="alert('Pressed!')"}>
+											<span class="text28" >
+												Previous
+											</span>
+										</button>
+										<button class="button12"
+											onclick="alert('Pressed!')"}>
+											<span class="text29" >
+												Next
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="column13">
+								<div class="column14">
+									<div class="view23">
+										<span class="text12" >
+											System Activity Feed
+										</span>
+									</div>
+									<div class="view24">
+										<span class="text13" >
+											Recent system updates and alerts
+										</span>
+									</div>
+								</div>
+								<div class="column15">
+									<div class="row-view25">
+										<div class="box6">
+										</div>
+										<div class="column16">
+											<div class="row-view26">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d0dfc61c-528a-40df-b099-8bf9a7bd4c4c" 
+													class="image8"
+												/>
+												<div class="view25">
+													<span class="text30" >
+														10:15 AM
+													</span>
+												</div>
+											</div>
+											<div class="view26">
+												<span class="text31" >
+													New Report: PC-05 (Mouse Issue) submitted.
+												</span>
+											</div>
+											<div class="view2">
+												<span class="text13" >
+													BSIT 2A - Room 204
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="row-view27">
+										<div class="box7">
+										</div>
+										<div class="column17">
+											<div class="row-view28">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/194e5ba4-495e-4ae0-93d1-e271eeff473f" 
+													class="image8"
+												/>
+												<div class="view25">
+													<span class="text30" >
+														09:42 AM
+													</span>
+												</div>
+											</div>
+											<div class="view27">
+												<span class="text5" >
+													Maintenance completed for PC-12.
+												</span>
+											</div>
+											<div class="view2">
+												<span class="text13" >
+													BSIT 3B - Room 205
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="row-view29">
+										<div class="box8">
+										</div>
+										<div class="column18">
+											<div class="row-view26">
+												<img
+													src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/18da0359-c862-4cc4-87ed-677eef07f71e" 
+													class="image8"
+												/>
+												<div class="view25">
+													<span class="text30" >
+														09:15 AM
+													</span>
+												</div>
+											</div>
+											<div class="view26">
+												<span class="text5" >
+													Critical: Network connectivity issue.
+												</span>
+											</div>
+											<div class="view2">
+												<span class="text13" >
+													Room 206 - All PCs affected
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="absolute-column2">
+					<div class="column19">
+						<button class="button13"
+							onclick="alert('Pressed!')"}>
+							<img
+								src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6670ae55-c2b2-4693-bf34-3326ec86168d" 
+								class="image9"
+							/>
+						</button>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/620ff431-dc0b-4521-9201-4a202c9f9412" 
+							class="image10"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b89ae501-2eae-42bf-aded-180bde394401" 
+							class="image10"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6c1f13a5-13e6-46a6-b91d-93bdada7aad5" 
+							class="image11"
+						/>
+					</div>
+					<div class="column20">
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7dd96a6c-32f8-435c-91b3-2842d6b9c1e8" 
+							class="image9"
+						/>
+						<img
+							src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3915db55-8a8e-41e6-bb4f-d58a905bd668" 
+							class="image9"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
